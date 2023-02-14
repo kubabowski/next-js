@@ -19,7 +19,10 @@ function contact() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({email: emailValue, eventId})
+        body: JSON.stringify({
+          email: emailValue, 
+          eventId
+        })
       });
 
       if(!response.ok) throw new Error(`Error: ${response.status}`);
@@ -31,8 +34,6 @@ function contact() {
     } catch (e) {
       console.log('ERROR', e)
     }
-
-
   };
 
   return (
