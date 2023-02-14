@@ -4,8 +4,6 @@ import Navbar from '../components/Navbar';
 import Head from 'next/head'
 import { useRouter } from 'next/router';
  
-
-
 function MyApp({ Component, pageProps }) {
 
   const [navHeight, setNavHeight] = React.useState();
