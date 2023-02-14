@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 
 const blog = ({data}) => {
+  useEffect(() => {
+    console.log(data)
+  }, [])
+  
+
   return (
     <>
-      {data.map((blog)=> {
+      {Object.values(data).map((blog)=> {
+        console.log(blog)
+
         return(
           <div className='container'>
-            <Link key={blog.id} href='/blog/{blog.id}'>
+            <Link key={blog.id} href={`/blog/${blog.slug}`}>
               <div className='text-white'>{blog.title}</div>
             </Link>
             
