@@ -1,28 +1,30 @@
 {
-    "post": [
-        {
-            "id":"1",
-            "title":"Hello world",
-            "slug": "hello-world",
-            "header1":"Lorem",
-            "header2":"Ipsum ",
-            "header3":"Lorem",
-            "text1":"sss",
-            "text2":"asd",
-            "text3":"sda",
-            "image":"dadada"
-        },
-        {
-            "id":"blog2",
-            "title":"Tytuł drugiego bloga",
-            "slug": "tytul-drugiego-bloga",
-            "header1":"Lorem",
-            "header2":"Ipsum dsddd",
-            "header3":"Loremdsssss",
-            "text1":"sssdffff",
-            "text2":"asdwwwww",
-            "text3":"sdaeee",
-            "image":"rscacs"
-        }
-    ]
+"post": [
+    {
+
+        "id":"1",
+        "title":"Tytuł pierwszego bloga",
+        "header1":"Lorem",
+        "header2":"Ipsum ",
+        "header3":"Lorem",
+        "text1":"sss",
+        "text2":"asd",
+        "text3":"sda",
+        "image":"dadada"
+
+    },
+    {
+        "id":"blog2",
+        "title":"Tytuł drugiego bloga",
+        "header1":"Lorem",
+        "header2":"Ipsum dsddd",
+        "header3":"Loremdsssss",
+        "text1":"sssdffff",
+        "text2":"asdwwwww",
+        "text3":"sdaeee",
+        "image":"rscacs"
+    }
+
+
+]
 }
