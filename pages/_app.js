@@ -1,13 +1,7 @@
-import React from 'react'
-import '../styles/globals.scss'
-import Navbar from '../components/Navbar'
-import portfolio from './portfolio'
-import contact from './contact'
-import 'jquery';
-import $ from 'jquery'; 
+import React from 'react';
+import '../styles/globals.scss';
+import Navbar from '../components/Navbar';
  
-
-
 function MyApp({ Component, pageProps }) {
 
   const [navHeight, setNavHeight] = React.useState(0);
@@ -34,11 +28,9 @@ function MyApp({ Component, pageProps }) {
   }, [])
 
   return (
-    <div className='home-gradient min-h-screen '>
+    <div className='home-gradient min-h-screen'>
       <Navbar getNavHeight={getNavHeight} />
-      <div id='scrollMargin'  style={{ height: navHeight }} >
-        
-      </div>
+      <div id='scrollMargin'  style={{ height: navHeight }} />
       <Component {...pageProps} />
     </div>
   )
