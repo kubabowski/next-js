@@ -48,7 +48,9 @@ function Slider(props) {
       return;
     }
     const newIndex = currentIndex - 1;
-    const newUrl = data.data.filter((item) => data.data.indexOf(item) === newIndex);
+    const newUrl = data.data.filter((item) => {
+      return data.data.indexOf(item) === newIndex;
+    });
     const newItem = newUrl[0].link;
     const newDesc = newUrl[0].text;
     setClickedImg(newItem);
@@ -56,38 +58,49 @@ function Slider(props) {
     setCurrentIndex(newIndex);
   };
 
-  const randomNumber = ( limit ) => Math.floor( Math.random() * limit) + 1;
-  const [rowCols, setRowCols] = useState([]);
+//   function randomNumber( limit ) { 
+//     return (
+//     Math.floor( Math.random() * limit) + 1 )
+//   }
+//   const [imagesQuantity, setImagesQuantity] = useState(data.data.length)
+//   const [rowCols, setRowCols] = useState(Array.from({length: `${imagesQuantity}`}, ()=> 
+//   [randomNumber(2), randomNumber(3), randomNumber(10)])
+// )
 
-  useEffect(() => {
-    const imagesQuantity = data.data.length;
-    const rowCols = Array.from(
-      {length: `${imagesQuantity}`}, () => [randomNumber(2), randomNumber(3), randomNumber(10)]
-    );
-    setRowCols(rowCols);
-  }, [data]);
+  // useEffect(() => {
+
+  
+  // // const imagesQuantity = data.data.length;
+  //   setImagesQuantity
+  //   setRowCols  
+  //   // setRowCols((rowCols)=> rowCols.splice(-1,1).push([1][1]))
+  // // const rowCols = Array.from({length: `${imagesQuantity}`}, ()=> 
+  // //   [randomNumber(2), randomNumber(3)]);
+
+  // }, [data])
+
+ 
   
  
   return (
     
     <div className="wrapper">
       
-      {rowCols.length > 0 && data.data.map((item, index) => (
-          <div 
-            key={index} 
-            className={`wrapper-images h-${rowCols[index][0]} v-${rowCols[index][1]} p-${rowCols[index][2]}`}
-          >
-            {/* {index} */}
-            
-            <img
-              src={item.link}
-              alt={item.text}
-              onClick={() => handleClick(item, index)}
-              className="portfolio-img "
-            />
-            {/* <h2>{item.text}</h2> */}
-          </div>
-        ))}
+      {data.data.map((item, index) => (
+        <div key={index} 
+        className={`wrapper-images h-${props.rowCols[index][0]} v-${props.rowCols[index][1]} p-${props.rowCols[index][2]}`}
+        >
+          {/* {index} */}
+          
+          <img
+            src={item.link}
+            alt={item.text}
+            onClick={() => handleClick(item, index)}
+            className="portfolio-img "
+          />
+          {/* <h2>{item.text}</h2> */}
+        </div>
+      ))}
       <div>
         {clickedImg && (
           <Modal
