@@ -64,7 +64,7 @@ const Navbar = (props) => {
 
     return (
     
-    <div id='navBarID' style={{backgroundColor: `${color}`}} className={`sticky top-0 left-0 w-full z-10 ease-in duration-300`}>
+    <div id='navBarID' style={{backgroundColor: `${color}`}} className={`fixed top-0 left-0 w-full z-10 ease-in duration-300`}>
         <div ref={ref} className={`${navPadding}  container max-w-[1240] m-auto flex justify-between items-center text-white mx-auto duration-300`}>
              
             <Link href='/'>
