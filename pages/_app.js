@@ -19,9 +19,9 @@ function MyApp({ Component, pageProps }) {
   React.useEffect(()=> {
       const addPad = () => {
           if(window.scrollY >= 90){ 
-              setNavPadding('py-2')
+              setNavPadding('h-[70px]')
           } else {
-              setNavPadding('py-4')
+              setNavPadding('h-[95px]')
           }
       }
       window.addEventListener('scroll', addPad)
