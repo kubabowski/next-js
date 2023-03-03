@@ -33,7 +33,7 @@ const NAV_LINKS = [
 const Navbar = (props) => {
     const [nav, setNav] = useState(false);
     const [color, setColor] = useState('transparent');
-    const [navPadding, setNavPadding] = useState(0);
+    const [navPadding, setNavPadding] = useState('h-[90px]');
     const {pathname} = useRouter();
     
     

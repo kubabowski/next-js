@@ -16,16 +16,16 @@ function MyApp({ Component, pageProps }) {
 
   
 
-  React.useEffect(()=> {
-      const addPad = () => {
-          if(window.scrollY >= 90){ 
-              setNavPadding('h-[70px]')
-          } else {
-              setNavPadding('h-[95px]')
-          }
-      }
-      window.addEventListener('scroll', addPad)
-  }, [])
+  // React.useEffect(()=> {
+  //     const addPad = () => {
+  //         if(window.scrollY >= 90){ 
+  //             setNavPadding('h-[70px]')
+  //         } else {
+  //             setNavPadding('h-[95px]')
+  //         }
+  //     }
+  //     window.addEventListener('scroll', addPad)
+  // }, [])
 
   return (
     <div className='home-gradient min-h-screen'>
