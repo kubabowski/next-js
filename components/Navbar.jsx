@@ -48,6 +48,7 @@ const Navbar = (props) => {
           return;
         } 
 
+
         setColor('transparent')
         setNavPadding('h-[90px]')
       }
@@ -59,6 +60,7 @@ const Navbar = (props) => {
 
     const ref = useRef(null);
     const [navHeight, setNavHeight ] = useState(0);
+
 
     useEffect(() => {
       setNavHeight( () =>  ref.current.clientHeight)       
