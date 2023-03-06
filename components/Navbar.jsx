@@ -48,6 +48,7 @@ const Navbar = (props) => {
           return;
         } 
 
+
         setColor('transparent')
         setNavPadding('h-[90px]')
       }
@@ -60,6 +61,7 @@ const Navbar = (props) => {
     const ref = useRef(null);
     const [navHeight, setNavHeight ] = useState(0);
 
+
     useEffect(() => {
       setNavHeight( () =>  ref.current.clientHeight)       
     },[navHeight])
@@ -68,8 +70,10 @@ const Navbar = (props) => {
 
     return (
     
+
     <div id='navBarID' style={{backgroundColor: `${color}`}} className={`fixed top-0 left-0 w-full z-10 ease`}>
         <div ref={ref} className={`${navPadding}  container m-auto flex justify-between items-center text-white mx-auto duration-300`}>
+
              
             <Link href='/'>
                 <div className='logo py-1'>
