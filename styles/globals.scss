@@ -6,6 +6,7 @@
 html, body {
     scroll-behavior: smooth;
     background-color: black;
+    font-family: "Fira Sans Condensed", "Fira Sans Extra Condensed", "Poiret One";
 }
 
 /* .home-img {
@@ -49,10 +50,10 @@ html, body {
       bottom: 0;
       content: "";
       display: block;
-      height: 2px;
+      height: 1px;
       left: 50%;
       position: absolute;
-      background: #fff;
+      background: rgba(255,255,255,0.3);
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
     }
@@ -63,6 +64,10 @@ html, body {
       }
     }
   
+}
+
+.page #scrollMargin {
+  display: none;
 }
 
 //PORTFOLIO============================================================================================================================

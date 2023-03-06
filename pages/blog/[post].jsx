@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
-import post from "../../data/blog_posts.json";
+import post from "../../data/dane.json";
 
 const Blog = ({ post }) => {
-  const { title } = post;
+  const { title, text1 } = post;
 
   const router = useRouter();
 
@@ -17,10 +17,11 @@ const Blog = ({ post }) => {
   
   
   return (
-    <>
-      <div className=' text-2xl text-center text-white align-bottom'>{title}</div>
+    <div className='container'>
+      <div className='text-2xl text-center text-white align-bottom'>{title}</div>
+      <div className='text-white align-bottom'>{text1}</div>
       <button onClick={goToContact}>{router.query.topic}</button>
-    </>
+    </div>
   )
 }
 
