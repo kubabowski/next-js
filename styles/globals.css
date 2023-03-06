@@ -4,7 +4,9 @@
 html, body {
   scroll-behavior: smooth;
   background-color: black;
+
   font-family: "Fira Sans Condensed", "Fira Sans Extra Condensed", "Poiret One";
+
 }
 
 /* .home-img {
@@ -22,6 +24,7 @@ html, body {
   background-color: blue;
   height: 100vh;
 }
+
 
 #navBarID .logo, #navBarID li {
   position: relative;
@@ -46,6 +49,7 @@ html, body {
 .page #scrollMargin {
   display: none;
 }
+
 
 .wrapper {
   display: grid;
