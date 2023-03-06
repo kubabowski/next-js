@@ -4,6 +4,9 @@
 html, body {
   scroll-behavior: smooth;
   background-color: black;
+
+  font-family: "Fira Sans Condensed", "Fira Sans Extra Condensed", "Poiret One";
+
 }
 
 /* .home-img {
@@ -21,6 +24,32 @@ html, body {
   background-color: blue;
   height: 100vh;
 }
+
+
+#navBarID .logo, #navBarID li {
+  position: relative;
+}
+#navBarID li::after, #navBarID .logo::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+#navBarID li:hover::after, #navBarID li.active::after, #navBarID .logo:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.page #scrollMargin {
+  display: none;
+}
+
 
 .wrapper {
   display: grid;
