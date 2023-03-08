@@ -49,8 +49,8 @@ function contact() {
 
   return (
     <>
-    <div className='container flex justify-between mt-[10rem]'>
-      <div className='w-[50%] pr-[6rem]'>
+    <div className='container flex justify-between mt-[10rem] contact'>
+      <div className='w-[40%] pr-[6rem]'>
         <form className='flex flex-col' onSubmit={onSubmit}>
             <label className=' mr-6 text-white'>Imię i nazwisko</label>
             <input ref={inputName} type='text' id='name' placeholder='Imię i nazwisko'></input>
@@ -62,7 +62,7 @@ function contact() {
             <input ref={inputSubject} type='text' id='subject' placeholder='Temat'></input>
 
             <label className=' mr-6 text-white'>Wiadomość</label>
-            <input ref={inputText} type='textarea' id='message' placeholder='Wiadomość'></input>
+            <textarea ref={inputText} type='textarea' rows="6" id='message' placeholder='Wiadomość'></textarea>
 
             <button className=' bg-white w-[20%] mt-20' type='submit'>Wyślij</button>
         </form>

@@ -76,7 +76,7 @@ const Navbar = (props) => {
 
              
             <Link href='/'>
-                <div className='logo py-1'>
+                <div className='logo py-1 text-md'>
                     Kalina Opalińska
                     {props.title}
                 </div>
@@ -84,7 +84,7 @@ const Navbar = (props) => {
 
             <ul className='hidden sm:flex'>
               {NAV_LINKS.map(({name, url}) => (
-                <li className={`${currentRoute == url ? "active" : ""} mx-4 py-1`}>
+                <li className={`text-md ${currentRoute == url ? "active" : ""} mx-4 py-1`}>
                   <Link href={url}>
                     {name}
                   </Link>
