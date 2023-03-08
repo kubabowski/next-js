@@ -2,7 +2,7 @@ import React from 'react'
 
 const oferta = () => {
   return (
-    <div>oferta</div>
+    <div className='container'>oferta</div>
   )
 }
 

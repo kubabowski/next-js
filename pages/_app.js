@@ -39,16 +39,7 @@ function MyApp({ Component, pageProps }) {
           <title>Kalina Opalińska</title>
           <link rel="icon" href="/favicon.ico" />
         
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200&family=Fira+Sans+Extra+Condensed:wght@100;200&family=Poiret+One&display=swap" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200&family=Fira+Sans+Extra+Condensed:wght@100;200&family=Poiret+One&display=swap" rel="stylesheet"></link>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200&family=Fira+Sans+Extra+Condensed:wght@100;200&family=Poiret+One&display=swap" rel="stylesheet"></link>
-        </Head>
+      </Head>
 
         <Navbar getNavHeight={getNavHeight} />
 

@@ -3,10 +3,25 @@
 @tailwind utilities;
 
 
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200&family=Fira+Sans+Extra+Condensed:wght@100;200&family=Poiret+One&display=swap');
+
+
+
+
+
+
 html, body {
     scroll-behavior: smooth;
     background-color: black;
     font-family: "Fira Sans Condensed", "Fira Sans Extra Condensed", "Poiret One";
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.fira-extra {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+.poiret {
+  font-family: 'Poiret One', cursive;
 }
 
 /* .home-img {
@@ -34,18 +49,21 @@ html, body {
     
     
   }
-.games {
-    background-color: blue;
-    height: 100vh;
-}
+
+  .white-line {
+    width: 85%;
+    height: 1px;
+    background-color: white;
+    margin-bottom: 2rem;
+  }
 
 //NAVBAR ============================================================================================================================
-#navBarID {
-  .logo, li {
+
+  .logo, li, .animated-underline {
     position: relative;
   }
 
-    li::after, .logo::after {
+    li::after, .logo::after, .animated-underline::after {
       background: none repeat scroll 0 0 transparent;
       bottom: 0;
       content: "";
@@ -57,14 +75,13 @@ html, body {
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
     }
-    li:hover, li.active, .logo:hover{
+    li:hover, li.active, .logo:hover, .animated-underline:hover{
       &::after {
         width: 100%; 
         left: 0; 
       }
     }
-  
-}
+
 
 .page #scrollMargin {
   display: none;
@@ -216,6 +233,14 @@ html, body {
         width: 50px;
         height: 50px;
       }
+    }
+  }
+
+  //KONTAKT=========================================================
+  .contact {
+    input, textarea {
+      padding: 0.5rem 0.8rem;
+      margin: 1rem 0
     }
   }
 
