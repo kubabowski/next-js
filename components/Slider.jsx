@@ -77,15 +77,13 @@ function Slider(props) {
             key={index} 
             className={`wrapper-images h-${rowCols[index][0]} v-${rowCols[index][1]} p-${rowCols[index][2]}`}
           >
-            {/* {index} */}
-            
             <img
               src={item.link}
               alt={item.text}
               onClick={() => handleClick(item, index)}
               className="portfolio-img "
             />
-            {/* <h2>{item.text}</h2> */}
+           
           </div>
         ))}
       <div>

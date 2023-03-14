@@ -42,7 +42,7 @@ const Navbar = (props) => {
 
     useEffect(()=> {
       const changeColor = () => {
-        if(window.scrollY > 90){
+        if(window.scrollY > 30){
           setColor('#000000e6')
           setNavPadding('h-[70px]')
           return;

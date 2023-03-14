@@ -34,7 +34,7 @@ html, body {
     // filter: contrast(90%) brightness(130%);
     background: 
     linear-gradient(to bottom,rgba(0,0,0,.6) 0,rgba(0,0,0,.1) 100%),
-    // linear-gradient(360deg, rgba(0,0,0,0.82), rgba(255,255,255,0)),
+    linear-gradient(360deg, rgba(0,0,0,0.82), rgba(255,255,255,0)),
     // linear-gradient(360deg, rgba(16,16,16,1), rgba(0,0,255,0)),
     // linear-gradient(360deg, rgba(133,133,133,1), rgba(0,0,94,0)),
     // linear-gradient(148deg, rgba(107,106,106,1), rgba(255,255,255,0.63)),
@@ -234,6 +234,10 @@ html, body {
         height: 50px;
       }
     }
+  }
+
+  .ril-toolbar {
+    background-color: unset!important;
   }
 
   //KONTAKT=========================================================
