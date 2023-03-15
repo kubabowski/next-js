@@ -11,7 +11,7 @@ const blog = ({data}) => {
 
         return(
           
-          <div className='container text-center '>
+          <div className='container text-center'>
             <Link key={blog.id} href={`/blog/${blog.slug}`}>
               <span className='text-white text-xl animated-underline pb-2 mb-4'>{blog.title}</span>
             </Link>
@@ -28,7 +28,7 @@ export default blog
 
 export async function getServerSideProps() {
   const { post } = await import('../../data/dane.json')
-  console.log( post ) 
+  
   return{
       props: {
         "data": post,

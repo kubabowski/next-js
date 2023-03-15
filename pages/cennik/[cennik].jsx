@@ -1,15 +1,12 @@
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
-import post from "../../data/dane.json";
+import offer from "../../data/daneCennik.json";
 
-const Blog = ({ post }) => {
-  const { title, text1 } = post;
+const Blog = ({ offer }) => {
+  const { id, title, desc } = offer;
 
   const router = useRouter();
 
-  useEffect(() => {
-    console.log(router)
-  }, [])
 
   const goToContact = () => {
     router.push('/contact')
@@ -19,8 +16,8 @@ const Blog = ({ post }) => {
   return (
     <div className='container mt-[3%]'>
       <div className='text-2xl text-center text-white align-bottom'>{title}</div>
-      <div className='text-white align-bottom'>{text1}</div>
-      <button className='text-white p-5' onClick={goToContact}>{router.query.topic} </button>
+      <div className='text-white align-bottom'>{desc}</div>
+      <button className='text-white p-5' onClick={goToContact}>{router.query.topic}</button>
     </div>
   )
 }
@@ -32,13 +29,13 @@ export async function getServerSideProps({
   params,
   ...rest
 }) {
-  const { post: postSlug } = params;
+  const { offer: offerSlug } = params;
 
-  const findedPost = post.post.find(({ slug }) => slug === postSlug);
+  const foundOffer = offer.offer.find(({ slug }) => slug === offerSlug);
 
   return {
     props: {
-      post: findedPost
+      offer: foundOffer
     },
   }
 }

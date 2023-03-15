@@ -27,14 +27,12 @@ const Lightboxv1 = () => {
 
 
   const images = data.data.map((item, index) => (
-    [ item.link, index]
+    [ item.link, item.text, index]
    
   ))
+  console.log(images)
 
-  const imageOnClick = () => {
-    setIsOpen(true);
-    setPhotoIndex();
-  }
+  
   
 
   return (
@@ -45,12 +43,11 @@ const Lightboxv1 = () => {
           key={index} 
           className={`wrapper-images h-${rowCols[index][0]} v-${rowCols[index][1]} p-${rowCols[index][2]}`}
         >
-        
           
           <img
             src={item.link}
             alt={item.text}
-            onClick={imageOnClick }
+            onClick={ () => {setPhotoIndex(index); setIsOpen(true);}}
             className="portfolio-img "
           />
          
@@ -70,6 +67,8 @@ const Lightboxv1 = () => {
             setPhotoIndex((photoIndex + 1) % images.length)
           }
           enableZoom = { false }
+          imageCaption = { images[photoIndex][1]}
+          
         />
       )}
       </div>

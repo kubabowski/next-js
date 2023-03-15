@@ -49,8 +49,25 @@ function contact() {
 
   return (
     <>
-    <div className='container flex justify-between mt-[10rem] contact'>
-      <div className='w-[40%] pr-[6rem]'>
+    <div className='container flex  mt-[5rem] contact'>
+    <div className='w-[50%] pr-[6rem]'>
+      <div className='mb-6'>
+        <span className='text-lg text-white'>Skontaktuj się ze mną</span>
+      </div>
+      <div>
+        <span className='text-md text-white mb-6'>kalinaopalinska@icloud.com</span>
+      </div>
+      <div>
+        <span className='text-md text-white mb-6'>instagram.com/kalinaopalinska</span>
+      </div>
+      <div>
+        <span className='text-md text-white mb-6'>730 737 974</span>
+      </div>
+    </div>
+      <div className='w-[35%]'>
+        <div className='mb-6'>
+          <span className='text-lg text-white mb-6'>lub skorzystaj z formularza</span>
+        </div>
         <form className='flex flex-col' onSubmit={onSubmit}>
             <label className=' mr-6 text-white'>Imię i nazwisko</label>
             <input ref={inputName} type='text' id='name' placeholder='Imię i nazwisko'></input>
@@ -66,9 +83,6 @@ function contact() {
 
             <button className=' bg-white w-[20%] mt-20' type='submit'>Wyślij</button>
         </form>
-      </div>
-      <div className='w-[50%] pl-[6rem]'>
-        sadasd
       </div>
     </div>
     </>

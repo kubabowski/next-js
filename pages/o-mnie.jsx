@@ -13,12 +13,12 @@ const about = () => {
           src={aboutImg}
           alt='about-me'
           className='about-me-img'
-          width='70%'
-          height='800px'
+          width='360'
+          
         />
       </div>
-      <div className='w-[65%]'>
-        <p className='text-white pl-10'>
+      <div className='w-[65%] flex items-center lh'>
+        <p className='text-white text-md leading-relaxed'>
           TWORZENIE WIZERUNKU JEST SZTUKĄ. KAŻDA Z NAS JEST NIEPOWTARZALNA, JEST INSPIRACJĄ, JEST PIĘKNA. NIE TYLKO NA ZEWNĄTRZ.
           PRZEZ LATA DZIAŁAŃ WYMAGAJĄCYCH MOJEJ KREATYWNOŚCI, DBAŁOŚCI O KAŻDY SZCZEGÓŁ, JAKOŚĆ I PREZENTACJE, NAUCZYŁAM SIĘ, ŻE KAŻDA Z NAS POTRZEBUJE CZASU, ABY ZROZUMIEĆ KIM JEST, JAK SIĘ CZUJE I JAKIE WYBORY SĄ DLA NIEJ NAJLEPSZE. CO SPRAWIA, ŻE CZUJE SIĘ PEWNA I W PEŁNI SOBĄ.
           NATURALNE PIĘKNO KAŻDEJ Z WAS INSPIRUJE MNIE DO TWORZENIA WIZERUNKU, KTÓRY DOPEŁNIA URODĘ – NIE ZMIENIAJĄC JEJ NIE DO POZNANIA – I POZWALA CI POKOCHAĆ SAMĄ SIEBIE, POCZUĆ SIĘ SILNĄ I ŚWIADOMĄ SWOJEGO PIĘKNA WEWNĘTRZNEGO, KTÓRE TYLKO PODKREŚLAMY NA ZEWNĄTRZ MAKIJAŻEM.
