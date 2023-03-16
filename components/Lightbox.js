@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+import Lightbox from 'react-18-image-lightbox';
+import 'react-18-image-lightbox/style.css';
 import data from "../data/images.json";
-import 'react-image-lightbox/style.css'; 
+
 
 
 
