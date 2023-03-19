@@ -3,10 +3,6 @@ import Lightbox from 'react-18-image-lightbox';
 import 'react-18-image-lightbox/style.css';
 import data from "../data/danePortfolio.json";
 import 'react-18-image-lightbox/style.css'; 
-import Lightbox from 'react-18-image-lightbox';
-import 'react-18-image-lightbox/style.css';
-import data from "../data/images.json";
-
 
 
 

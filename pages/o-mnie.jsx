@@ -13,13 +13,8 @@ const about = () => {
           src={aboutImg}
           alt='about-me'
           className='about-me-img'
-<<<<<<< HEAD
           width='360'
           
-=======
-          width='70%'
-          height='800px'
->>>>>>> main
         />
       </div>
       <div className='w-[65%] flex items-center lh'>
