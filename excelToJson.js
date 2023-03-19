@@ -26,10 +26,14 @@ function convertToNewFormatBlog(arr) {
 function convertToNewFormatCennik(arr) {
   return { "offer": arr };
 }
+function convertToNewFormatPortfolio(arr) {
+  return { "images": arr };
+}
 
 // Convert the data to the new format
 const newDataBlog = convertToNewFormatBlog(blogData);
 const newDataCennik = convertToNewFormatCennik(cennikData);
+const newDataPortfolio = convertToNewFormatPortfolio(portfolioData);
 
 // Write the JSON object to a file
 fs.writeFile("data/daneBlog.json", JSON.stringify(newDataBlog), (err) => {
@@ -41,7 +45,7 @@ fs.writeFile("data/daneCennik.json", JSON.stringify(newDataCennik), (err) => {
   console.log("JSON data is saved.");
 });
 
-fs.writeFile("data/danePortfolio.json", JSON.stringify(portfolioData), (err) => {
+fs.writeFile("data/danePortfolio.json", JSON.stringify(newDataPortfolio), (err) => {
   if (err) throw err;
   console.log("JSON data is saved.");
 });

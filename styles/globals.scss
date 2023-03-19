@@ -45,7 +45,7 @@ html, body {
     url("../images/bckground1.png");
     background-repeat: no-repeat;
     background-size: auto;
-    
+    background-attachment: fixed;
     
     
   }
@@ -110,17 +110,43 @@ html, body {
       overflow: hidden;
       object-fit: cover;
       
+      &.v-1{
+        grid-row: span 1; 
+       }
       &.v-2{
        grid-row: span 2; 
       }
       &.v-3{
         grid-row: span 3; 
        }
-       &.h-3{
+      &.v-4{
+      grid-row: span 4; 
+      }
+      &.v-5{
+        grid-row: span 5; 
+       }
+      &.h-3{
         grid-column: span 3; 
        }
-       &.h-2{
+      &.h-2{
         grid-column: span 2; 
+       }
+       &.h-4{
+        grid-column: span 4; 
+       }
+      &.h-5{
+        grid-column: span 5; 
+       }
+
+       &.h-2.v-1 {
+        grid-row: span 2; 
+       }
+       &.h-3.v-1 {
+        grid-row: span 2; 
+        grid-column: span 2; 
+       }
+       &.h-4.v-1 {
+        grid-row: span 2; 
        }
     }
     .p-1{

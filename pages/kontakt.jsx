@@ -52,7 +52,10 @@ function contact() {
     <div className='container flex  mt-[5rem] contact'>
     <div className='w-[50%] pr-[6rem]'>
       <div className='mb-6'>
-        <span className='text-lg text-white'>Skontaktuj się ze mną</span>
+        <span className='text-xl text-white'>Skontaktuj się ze mną</span>
+      </div>
+      <div>
+        <span className='text-lg text-white mb-3'>napisz</span>
       </div>
       <div>
         <span className='text-md text-white mb-6'>kalinaopalinska@icloud.com</span>
@@ -61,12 +64,15 @@ function contact() {
         <span className='text-md text-white mb-6'>instagram.com/kalinaopalinska</span>
       </div>
       <div>
+        <span className='text-lg text-white mb-3'>zadzwoń</span>
+      </div>
+      <div>
         <span className='text-md text-white mb-6'>730 737 974</span>
       </div>
     </div>
       <div className='w-[35%]'>
         <div className='mb-6'>
-          <span className='text-lg text-white mb-6'>lub skorzystaj z formularza</span>
+          <span className='text-xl text-white mb-6'>lub skorzystaj z formularza</span>
         </div>
         <form className='flex flex-col' onSubmit={onSubmit}>
             <label className=' mr-6 text-white'>Imię i nazwisko</label>
