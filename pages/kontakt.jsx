@@ -49,6 +49,7 @@ function contact() {
 
   return (
     <>
+<<<<<<< HEAD
     <div className='container flex  mt-[5rem] contact'>
     <div className='w-[50%] pr-[6rem]'>
       <div className='mb-6'>
@@ -74,6 +75,10 @@ function contact() {
         <div className='mb-6'>
           <span className='text-xl text-white mb-6'>lub skorzystaj z formularza</span>
         </div>
+=======
+    <div className='container flex justify-between mt-[10rem] contact'>
+      <div className='w-[40%] pr-[6rem]'>
+>>>>>>> main
         <form className='flex flex-col' onSubmit={onSubmit}>
             <label className=' mr-6 text-white'>Imię i nazwisko</label>
             <input ref={inputName} type='text' id='name' placeholder='Imię i nazwisko'></input>
