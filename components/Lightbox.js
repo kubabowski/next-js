@@ -9,7 +9,12 @@ import 'react-18-image-lightbox/style.css';
 
 const Lightboxv1 = () => {
   const [rowCols, setRowCols] = useState([]);
-  const [photoIndex, setPhotoIndex] = useState(0);
+  const [photoIndex, setPhotoIndex] = useState({
+    photoId: null,
+    photoText: "",
+    photoNumber: null
+  });
+  // const [descIndex, setDescIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
   const randomNumber = ( limit ) => Math.floor( Math.random() * limit) + 1;
@@ -54,7 +59,16 @@ const Lightboxv1 = () => {
           <img
             src={`images/${item.photo_id}.${images[index].slice(-3) == "jpg" ? jpg : png }`}
             alt={item.desc}
-            onClick={ () => {setPhotoIndex(images[index][1].photo_id); setIsOpen(true); } }
+            onClick={ () => {
+              setPhotoIndex( {
+                photoId: images[index][1].photo_id,
+                photoText: images[index][1].desc,
+                photoNumber: images[index]
+              });
+              console.log(photoIndex);
+              // setDescIndex(images[index][1].photo_id) 
+              setIsOpen(true); 
+            } }
             className="portfolio-img"
           />
          
@@ -63,18 +77,18 @@ const Lightboxv1 = () => {
 
       {isOpen && (
         <Lightbox
-          mainSrc={`images/${photoIndex}.png`}
-          nextSrc={images[(photoIndex + 1) % images.length]}
-          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+          mainSrc={`images/${photoIndex.photoId}.png`}
+          nextSrc={images[(photoIndex.photoNumber + 1) % images.length]}
+          prevSrc={images[(photoIndex.photoNumber + images.length - 1) % images.length]}
           onCloseRequest={() => setIsOpen(false)}
           onMovePrevRequest={() =>
-            setPhotoIndex((photoIndex + images.length - 1) % images.length)
+            setPhotoIndex((photoIndex.photoNumber + images.length - 1) % images.length)
           }
           onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % images.length)
+            setPhotoIndex((photoIndex.photoNumber + 1) % images.length)
           }
           enableZoom = { false }
-           imageCaption = { images[photoIndex][1].text}
+           imageCaption = { photoIndex.photoText}
           
         />
       )}
