@@ -11,7 +11,7 @@ const blog = ({data}) => {
 
         return(
           
-          <div className='container text-center mb-1'>
+          <div className='container mb-1'>
             <Link className='text-white text-md animated-underline pb-1 ' key={offer.id} href={`/cennik/${offer.slug}`}>
               {offer.title}
             </Link>
