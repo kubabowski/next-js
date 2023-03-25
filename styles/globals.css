@@ -2,6 +2,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 660px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  html {
+    font-size: 13px;
+  }
+}
 html, body {
   scroll-behavior: smooth;
   background-color: black;
@@ -26,6 +41,7 @@ html, body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.1) 100%), linear-gradient(360deg, rgba(0, 0, 0, 0.82), rgba(255, 255, 255, 0)), url("../images/bckground1.png");
   background-repeat: no-repeat;
   background-size: auto;
+  background-attachment: fixed;
 }
 
 .white-line {
@@ -75,17 +91,42 @@ li:hover::after, li.active::after, .logo:hover::after, .animated-underline:hover
   -o-object-fit: cover;
      object-fit: cover;
 }
+.wrapper .wrapper-images.v-1 {
+  grid-row: span 1;
+}
 .wrapper .wrapper-images.v-2 {
   grid-row: span 2;
 }
 .wrapper .wrapper-images.v-3 {
   grid-row: span 3;
 }
+.wrapper .wrapper-images.v-4 {
+  grid-row: span 4;
+}
+.wrapper .wrapper-images.v-5 {
+  grid-row: span 5;
+}
 .wrapper .wrapper-images.h-3 {
   grid-column: span 3;
 }
 .wrapper .wrapper-images.h-2 {
   grid-column: span 2;
+}
+.wrapper .wrapper-images.h-4 {
+  grid-column: span 4;
+}
+.wrapper .wrapper-images.h-5 {
+  grid-column: span 5;
+}
+.wrapper .wrapper-images.h-2.v-1 {
+  grid-row: span 2;
+}
+.wrapper .wrapper-images.h-3.v-1 {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.wrapper .wrapper-images.h-4.v-1 {
+  grid-row: span 2;
 }
 .wrapper .p-1 {
   padding: 2px;
@@ -183,7 +224,34 @@ li:hover::after, li.active::after, .logo:hover::after, .animated-underline:hover
   height: 50px;
 }
 
+.ril-toolbar {
+  background-color: unset !important;
+}
+
+.ril-image-current.ril__image {
+  margin: auto 50%;
+}
+
+.ril-caption.ril__caption {
+  background-color: unset;
+  max-height: unset;
+  left: unset;
+  right: unset;
+  margin: auto 50% auto 5%;
+  bottom: 50%;
+  transform: translate(0, 50%);
+}
+.ril-caption.ril__caption .ril-caption-content.ril__captionContent {
+  font-size: 3rem;
+}
+
 .contact input, .contact textarea {
   padding: 0.5rem 0.8rem;
   margin: 1rem 0;
+}
+
+.offer-animation {
+  position: absolute;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
 }/*# sourceMappingURL=globals.css.map */
