@@ -13,9 +13,9 @@
     "react": "18.2.0",
     "react-18-image-lightbox": "^5.1.4",
     "react-dom": "18.2.0",
-    
     "react-slick": "^0.29.0",
     "sass": "^1.57.1",
+    "tw-elements": "^1.0.0-beta1",
     "xlsx": "^0.18.5",
     "yet-another-react-lightbox": "^2.6.2"
   },

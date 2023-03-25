@@ -6,8 +6,8 @@ const about = () => {
 
   // const img = require('./../images/sesja9.jpg');
   return (
-    <div className='flex container'>
-      <div className='w-[35%]'>
+    <div className='flex flex-col md:flex-row container'>
+      <div className=' w10 md:w-[35%] order-2 md:order-1'>
         <Image 
           // src={require('./../images/sesja9.jpg').default}
           src={aboutImg}
@@ -17,7 +17,7 @@ const about = () => {
           
         />
       </div>
-      <div className='w-[65%] flex items-center lh'>
+      <div className='px-5 md:px-0 md:w-[65%] flex items-center lh order-1 md:order-2'>
         <p className='text-white text-md leading-relaxed'>
           TWORZENIE WIZERUNKU JEST SZTUKĄ. KAŻDA Z NAS JEST NIEPOWTARZALNA, JEST INSPIRACJĄ, JEST PIĘKNA. NIE TYLKO NA ZEWNĄTRZ.
           PRZEZ LATA DZIAŁAŃ WYMAGAJĄCYCH MOJEJ KREATYWNOŚCI, DBAŁOŚCI O KAŻDY SZCZEGÓŁ, JAKOŚĆ I PREZENTACJE, NAUCZYŁAM SIĘ, ŻE KAŻDA Z NAS POTRZEBUJE CZASU, ABY ZROZUMIEĆ KIM JEST, JAK SIĘ CZUJE I JAKIE WYBORY SĄ DLA NIEJ NAJLEPSZE. CO SPRAWIA, ŻE CZUJE SIĘ PEWNA I W PEŁNI SOBĄ.
