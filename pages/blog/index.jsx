@@ -13,7 +13,7 @@ const blog = ({data}) => {
           
           <div className='container text-center'>
             <Link key={blog.id} href={`/blog/${blog.slug}`}>
-              <span className='text-white text-xl animated-underline pb-2 mb-4'>{blog.title}</span>
+              <span className='text-white text-md md:text-xl animated-underline pb-2 mb-4'>{blog.title}</span>
             </Link>
           </div>
           
