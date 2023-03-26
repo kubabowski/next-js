@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import React, {useState, useEffect, useRef} from 'react'
 import { useRouter } from "next/router";
-// import {AiOutlineMenu ,AiOutlineClose} from 'react-icons/ai';
-// import { Turn as Hamburger } from 'hamburger-react'
+
 
 const NAV_LINKS = [
   {
@@ -92,7 +91,13 @@ const Navbar = (props) => {
                 </li>
               ))}               
             </ul>
-            <a href='#' className='text-white sm:hidden' onClick={handleNav} >Open</a>      
+            <a href='#' className='text-white sm:hidden' onClick={handleNav} >
+            <svg viewBox="0 0 50 80" width="40" height="20">
+              <rect fill='white' width="100" height="5"></rect>
+              <rect fill='white' y="30" width="100" height="5"></rect>
+              <rect fill='white'  y="60" width="100" height="5"></rect>
+            </svg>
+              </a>      
             
         
             <div className={nav 
@@ -100,7 +105,7 @@ const Navbar = (props) => {
                 : ' sm:hidden absolute top-0 right-[-100%] bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'}>
                 <ul>
                   {NAV_LINKS.map(({name, url}) => (
-                    <li className='p-4 text-md hover:text-gray-500 ease-in-out duration-150 '>
+                    <li className='p-4 text-lg hover:text-gray-500 ease-in-out duration-150 '>
                       <Link href={url} onClick={handleNav}>
                         {name}
                       </Link>
@@ -108,7 +113,9 @@ const Navbar = (props) => {
                 ))}      
                          
                 </ul>
-                <a href='#' className='text-white sm:hidden absolute top-[8%] right-[3%]' onClick={handleNav} >Close</a>      
+                <a href='#' className='text-white sm:hidden text-xl absolute top-[4%] right-[7%]' onClick={handleNav} >
+                <svg width="40" height="40" viewbox="0 0 40 40"><path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="white" stroke-width="1" /></svg>
+                </a>      
             </div>
         </div>
     </div>

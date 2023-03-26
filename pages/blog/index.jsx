@@ -27,7 +27,7 @@ const blog = ({data}) => {
 export default blog
 
 export async function getServerSideProps() {
-  const { post } = await import('../../data/dane.json')
+  const { post } = await import('../../data/daneBlog.json')
   
   return{
       props: {

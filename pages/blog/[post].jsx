@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
-import post from "../../data/dane.json";
+import post from "../../data/daneBlog.json";
 
 const Blog = ({ post }) => {
   const { title, text1 } = post;

@@ -49,8 +49,8 @@ function contact() {
 
   return (
     <>
-    <div className='container flex  mt-[5rem] contact'>
-    <div className='w-[50%] pr-[6rem]'>
+    <div className='container flex flex-col md:flex-row  mt-[2rem] contact'>
+    <div className='md:w-[50%] md:pr-[6rem]'>
       <div className='mb-6'>
         <span className='text-xl text-white'>Skontaktuj się ze mną</span>
       </div>
@@ -63,14 +63,14 @@ function contact() {
       <div>
         <span className='text-md text-white mb-6'>instagram.com/kalinaopalinska</span>
       </div>
-      <div>
+      <div className='mt-6'>
         <span className='text-lg text-white mb-3'>zadzwoń</span>
       </div>
       <div>
         <span className='text-md text-white mb-6'>730 737 974</span>
       </div>
     </div>
-      <div className='w-[35%]'>
+      <div className='mt-[3rem] md:mt-0 md:w-[35%]'>
         <div className='mb-6'>
           <span className='text-xl text-white mb-6'>lub skorzystaj z formularza</span>
         </div>
