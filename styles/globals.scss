@@ -110,70 +110,70 @@ html, body {
       overflow: hidden;
       object-fit: cover;
       
-      &.v-1{
+      &.width-1{
         grid-row: span 1; 
        }
-      &.v-2{
+      &.width-2{
        grid-row: span 2; 
       }
-      &.v-3{
+      &.width-3{
         grid-row: span 3; 
        }
-      &.v-4{
+      &.width-4{
       grid-row: span 4; 
       }
-      &.v-5{
+      &.width-5{
         grid-row: span 5; 
        }
-      &.h-3{
+      &.height-3{
         grid-column: span 3; 
        }
-      &.h-2{
+      &.height-2{
         grid-column: span 2; 
        }
-       &.h-4{
+       &.height-4{
         grid-column: span 4; 
        }
-      &.h-5{
+      &.height-5{
         grid-column: span 5; 
        }
 
-       &.h-2.v-1 {
+       &.height-2.width-1 {
         grid-row: span 2; 
        }
-       &.h-3.v-1 {
+       &.height-3.width-1 {
         grid-row: span 2; 
         grid-column: span 2; 
        }
-       &.h-4.v-1 {
+       &.height-4.width-1 {
         grid-row: span 2; 
        }
     }
-    .p-1{
+    .padding-1{
       padding: 2px;
     }
-    .p-2{
+    .padding-2{
       padding: 3px;
     }
-    .p-3{
+    .padding-3{
       padding: 4px;
     }
-    .p-4{
+    .padding-4{
       padding: 5px;
     }
-    .p-5{
+    .padding-5{
       padding: 6px;
     }
-    .p-6{
+    .padding-6{
       padding: 7px;
     }
-    .p-7{
+    .padding-7{
       padding: 8px;
     }
-    .p-8{
+    .padding-8{
       padding: 9px;
     }
-    .p-9{
+    .padding-9{
       padding: 10px;
     }
     

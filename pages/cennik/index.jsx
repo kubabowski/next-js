@@ -11,7 +11,13 @@ const blog = ({data}) => {
     title:"",
     desc: ""
   });
+  const [ariaExpanded, setAriaExpanded] = useState(false);
+  const [collapseShow, setCollapseShow] = useState("");
+  // const ref = useRef();
   
+  const accordionChange = (id) => {
+    setAriaExpanded((prevAriaExpanded) => !prevAriaExpanded);
+  }
 
 
   useEffect(()=> {
@@ -51,9 +57,10 @@ const blog = ({data}) => {
             className="group relative flex w-full items-center border-0 py-4 px-5 text-left text-base  transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none text-white "
             // [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] <--- separating line
             type="button"
+            onClick={ ()=> accordionChange(offer.id) }
             data-te-collapse-init
             data-te-target={`#collapse-${offer.id}`}
-            aria-expanded="false"
+            aria-expanded={ariaExpanded}
             aria-controls={`#collapse-${offer.id}`}>
             {offer.title}
             <span
@@ -76,7 +83,8 @@ const blog = ({data}) => {
         <div
           id={`collapse-${offer.id}`}
           className="!visible"
-          data-te-collapse-item
+          data-te-collapse-item 
+          collapseShow
           data-te-collapse-show
           aria-labelledby={offer.id}
           data-te-parent="#accordionOffer">

@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
           <link rel="icon" href="/favicon.ico" />
         
       </Head>
-      <script src="../node_modules/tw-elements/dist/js/index.min.js"></script>
+      {/* <script src="../node_modules/tw-elements/dist/js/index.min.js"></script> */}
         <Navbar getNavHeight={getNavHeight} />
 
         <div className={`${currentRoute} home-gradient min-h-screen`}>

@@ -4,7 +4,7 @@ import 'react-18-image-lightbox/style.css';
 import data from "../data/danePortfolio.json";
 import 'react-18-image-lightbox/style.css'; 
 
-const Lightboxx = () => {
+const Lightboxv1 = () => {
   const [rowCols, setRowCols] = useState([]);
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +21,7 @@ const Lightboxx = () => {
 
   const images = data.images.map((item, index) => ({
     src     : item.photo_url,
-    caption : item.desc,
+    caption: item.desc,
     index
   }));
 
@@ -45,7 +45,7 @@ const Lightboxx = () => {
           data.images.map((item, index) => (
             <div
               key={index}
-              className={`wrapper-images h-${rowCols[index][0]} v-${rowCols[index][1]} p-${rowCols[index][2]}`}
+              className={`wrapper-images height-${rowCols[index][0]} width-${rowCols[index][1]} padding-${rowCols[index][2]}`}
             >
               <img
                 src={item.photo_url}
@@ -72,4 +72,4 @@ const Lightboxx = () => {
   );
 };
 
-export default Lightboxx;
+export default Lightboxv1;

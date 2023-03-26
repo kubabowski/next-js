@@ -81,7 +81,7 @@ const Navbar = (props) => {
                     {props.title}
                 </div>
             </Link>
-
+    
             <ul className='hidden sm:flex'>
               {NAV_LINKS.map(({name, url}) => (
                 <li className={`text-md ${currentRoute == url ? "active" : ""} mx-4 py-1`}>
@@ -91,19 +91,22 @@ const Navbar = (props) => {
                 </li>
               ))}               
             </ul>
+            <a href='#' className='text-white sm:hidden' onClick={handleNav} >DDD</a>      
         
             <div className={nav 
                 ? 'absolute top-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' 
                 : ' sm:hidden absolute top-0 right-[-100%] bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'}>
                 <ul>
                   {NAV_LINKS.map(({name, url}) => (
-                    <li className='p-4 text-4xl hover:text-gray-500 ease-in-out duration-150 '>
-                      <Link href={url}>
+                    <li className='p-4 text-md hover:text-gray-500 ease-in-out duration-150 '>
+                      <Link href={url} onClick={handleNav}>
                         {name}
                       </Link>
                     </li>
-                ))}                     
+                ))}      
+                         
                 </ul>
+                
             </div>
         </div>
     </div>
