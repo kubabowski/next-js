@@ -91,7 +91,7 @@ const Navbar = (props) => {
                 </li>
               ))}               
             </ul>
-            <a href='#' className='text-white sm:hidden' onClick={handleNav} >DDD</a>      
+            <a href='#' className='text-white sm:hidden' onClick={handleNav} >Open</a>      
         
             <div className={nav 
                 ? 'absolute top-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' 
@@ -106,7 +106,7 @@ const Navbar = (props) => {
                 ))}      
                          
                 </ul>
-                
+                <a href='#' className='text-white sm:hidden absolute top-[8%] right-[3%]' onClick={handleNav} >Close</a>      
             </div>
         </div>
     </div>

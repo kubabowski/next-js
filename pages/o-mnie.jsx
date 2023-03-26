@@ -17,7 +17,7 @@ const about = () => {
           
         />
       </div>
-      <div className='px-5 md:px-0 md:w-[65%] flex items-center lh order-1 md:order-2'>
+      <div className='md:w-[65%] flex items-center lh order-1 md:order-2'>
         <p className='text-white text-md leading-relaxed'>
           TWORZENIE WIZERUNKU JEST SZTUKĄ. KAŻDA Z NAS JEST NIEPOWTARZALNA, JEST INSPIRACJĄ, JEST PIĘKNA. NIE TYLKO NA ZEWNĄTRZ.
           PRZEZ LATA DZIAŁAŃ WYMAGAJĄCYCH MOJEJ KREATYWNOŚCI, DBAŁOŚCI O KAŻDY SZCZEGÓŁ, JAKOŚĆ I PREZENTACJE, NAUCZYŁAM SIĘ, ŻE KAŻDA Z NAS POTRZEBUJE CZASU, ABY ZROZUMIEĆ KIM JEST, JAK SIĘ CZUJE I JAKIE WYBORY SĄ DLA NIEJ NAJLEPSZE. CO SPRAWIA, ŻE CZUJE SIĘ PEWNA I W PEŁNI SOBĄ.
