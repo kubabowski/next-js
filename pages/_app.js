@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
       {/* <script src="../node_modules/tw-elements/dist/js/index.min.js"></script> */}
         <Navbar getNavHeight={getNavHeight} />
 
-        <div className={`${currentRoute} home-gradient min-h-screen`}>
+        <div className={`${currentRoute} home-gradient min-h-screen pb-10`}>
           <div id='scrollMargin'  style={{ height: navHeight }} />
           <Component {...pageProps} />
         </div>

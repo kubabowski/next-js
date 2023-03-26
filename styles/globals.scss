@@ -4,7 +4,7 @@
 
 
   @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200&family=Fira+Sans+Extra+Condensed:wght@100;200&family=Poiret+One&display=swap');
-  @import './media.scss';
+  
 
 
 
@@ -90,15 +90,10 @@ html, body {
 //PORTFOLIO============================================================================================================================
 
 .wrapper {
-    // max-width: 1350px;
-    // padding: 0px 60px;
-    // margin: 50px auto;
-    // display: flex;
-    // flex-wrap: wrap;
-    // gap: 2em;
     display: grid;
     grid-template-columns: repeat(auto-fill, 100px);
     grid-auto-rows: 100px;
+    
     grid-auto-flow: dense;
     
     img {
@@ -177,91 +172,15 @@ html, body {
       padding: 10px;
     }
     
-    
-    // .wrapper-images:nth-of-type(2n) {
-    //   padding: 4px 6px;
-  
-    // }
-    // .wrapper-images:nth-of-type(3n-1) {
-    //   padding: 5px 7px;
-  
-    // }
     .portfolio-img {
       object-fit: cover;
       height: 100%;
       width: 100%;
     }
-
-
   }
   
   
-  /* modal */
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(27, 27, 27, 0.9);
-    display: flex;
-    align-items: center;
-    z-index: 100;
-    justify-content: center;
-    img {
-      display: block;
-      max-width: 60%;
-      max-height: 80%;
-      // margin: 60px auto;
-      box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
-    }
-    & > span {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 30px;
-      color: #ffffff;
-      z-index: 999;
-      cursor: pointer;
-    }
-    .overlay-arrows_left {
-      display: flex;
-      background-color: #6d6d6d;
-      justify-content: space-between;
-      position: absolute;
-      top: 50%;
-      width: 50px;
-      height: 50px;
-      left: 0;
-      z-index: 999;
-      cursor: pointer;
-
-      svg {
-        width: 50px;
-        height: 50px;
-      }
-    }
-
-    .overlay-arrows_right {
-      display: flex;
-      background-color: #6d6d6d;
-      justify-content: space-between;
-      position: absolute;
-      right: 0;
-      width: 50px;
-      height: 50px;
-      top: 50%;
-      z-index: 999;
-      cursor: pointer;
-
-      svg {
-        width: 50px;
-        height: 50px;
-      }
-    }
-  }
-
+ 
 //LIGHTBOX==========================================================================================================================
 
   .ril-toolbar {
@@ -294,25 +213,165 @@ html, body {
 
 
   //CENNIK ===================================================================================================================
+  // .offer-display {
+  //   position: absolute;
+  //   left: 20%;
+  //   margin: auto 0;
+  // }
+  
   .offer-animation {
     position: absolute;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-    // @keyframes animation {
-    //   0% {
-    //     top: 0;
-    //     opacity: 0;
-    //   }
-    //   100% {
-    //     top: 50%;
-    //     opacity: 1;
-    //   }
-    // }
+    animation-duration: 0.15s;
+    animation-timing-function: ease;
+    animation-name: animation-offer;
+    @keyframes animation-offer {
+      0% {
+        left: -100%;
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        left: 20%;
+        opacity: 1;
+      }
+    }
 
   }
   
+  //=================================================================================================================================
+  //=================================================================================================================================
+  //=================================================================================================================================
+  //=================================================================================================================================
+  //=================================================================================================================================
+  //=================================================================================================================================
+  //=================================================================================================================================
 
-  
+
+  @media only screen and (max-width: 900px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    html {
+        font-size: 14px;
+    }
+
+    //PORTFOLIO============================================================================================================================
+
+.wrapper {
+    display: grid;
+    grid-template-columns: unset;
+    grid-auto-rows: 100px;
+    grid-column: 100px;
+    grid-auto-flow: dense;
+    
+    img {
+      cursor: pointer;
+    }
+
+    .wrapper-images {
+      // display: contents;
+      overflow: hidden;
+      object-fit: cover;
+      
+      &.width-1{
+        grid-row: span 1; 
+       }
+      &.width-2{
+       grid-row: span 2; 
+      }
+      &.width-3{
+        grid-row: span 2; 
+       }
+      &.width-4{
+      grid-row: span 2; 
+      }
+      &.width-5{
+        grid-row: span 1; 
+       }
+      &.height-3{
+        grid-column: span 1; 
+       }
+      &.height-2{
+        grid-column: span 2; 
+       }
+       &.height-4{
+        grid-column: span 2; 
+       }
+      &.height-5{
+        grid-column: span 1; 
+       }
+
+       &.height-2.width-1 {
+        grid-row: span 2; 
+       }
+       &.height-3.width-1 {
+        grid-row: span 2; 
+        grid-column: span 2; 
+       }
+       &.height-4.width-1 {
+        grid-row: span 2; 
+       }
+    }
+    .padding-1{
+      padding: 1px;
+    }
+    .padding-2{
+      padding: 2px;
+    }
+    .padding-3{
+      padding: 3px;
+    }
+    .padding-4{
+      padding: 4px;
+    }
+    .padding-5{
+      padding: 5px;
+    }
+    .padding-6{
+      padding: 6px;
+    }
+    .padding-7{
+      padding: 7px;
+    }
+    .padding-8{
+      padding: 8px;
+    }
+    .padding-9{
+      padding: 9px;
+    }
+  }
+
+  //LIGHTBOX==========================================================================================================================
+
+
+  .ril-image-current.ril__image {
+    margin: auto;
+  }
+
+  .ril-caption.ril__caption {
+    background-color: unset;
+    max-height: unset;
+    left: unset;
+    right: unset;
+    margin: unset;
+    bottom: 0;
+    transform: unset;
+    .ril-caption-content.ril__captionContent {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+    html {
+        font-size: 13px;
+    }
+}
   
   
   

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React, {useState, useEffect, useRef} from 'react'
 import { useRouter } from "next/router";
 // import {AiOutlineMenu ,AiOutlineClose} from 'react-icons/ai';
+// import { Turn as Hamburger } from 'hamburger-react'
 
 const NAV_LINKS = [
   {
@@ -92,6 +93,7 @@ const Navbar = (props) => {
               ))}               
             </ul>
             <a href='#' className='text-white sm:hidden' onClick={handleNav} >Open</a>      
+            
         
             <div className={nav 
                 ? 'absolute top-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' 

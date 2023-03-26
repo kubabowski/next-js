@@ -26,12 +26,12 @@ const blog = ({data}) => {
 
   return (
     <>
-    <div className=' justify-center mt-[5rem] container hidden md:flex'>
+    <div className=' justify-center mt-[2rem] container hidden md:flex'>
       <div className=' w-[20%]'>
         {Object.values(data).map((offer)=> {
 
           return(
-            <div className='container mb-1 '>
+            <div className='mb-1 '>
                 <Link onMouseEnter={()=> { setHoveredItem(offer); }} className='text-white text-md animated-underline pb-1 ' key={offer.id} href={`#`}>
                   {offer.title}
                 </Link>

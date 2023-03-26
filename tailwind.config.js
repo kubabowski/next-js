@@ -18,7 +18,14 @@ module.exports = {
       '2xl': '4rem'
     },
     container: {
-      center: true
+      center: true,
+      padding: {
+        sm: '1rem',
+        md: '1rem',
+        lg: '0.5rem',
+        xl: '1rem',
+        '2xl': '0',
+      }
     },
     extend: {},
   },
