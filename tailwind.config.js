@@ -21,10 +21,11 @@ module.exports = {
       center: true,
       padding: {
         sm: '1rem',
-        md: '1rem',
-        lg: '0.5rem',
-        xl: '1rem',
-        '2xl': '0',
+        md: '3rem',
+        lg: '3rem',
+        xl: '3rem',
+        '2xl': '3rem',
+        '3xl': '0',
       }
     },
     extend: {},
