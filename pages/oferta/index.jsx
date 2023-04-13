@@ -14,8 +14,7 @@ const blog = ({data}) => {
   const accordionChange = (id) => {
     setAriaExpanded((prevAriaExpanded) => !prevAriaExpanded);
   }
-
-
+  
  
 
   return (
@@ -48,17 +47,16 @@ const blog = ({data}) => {
 
     return( 
 
-    <div className="">
+    <>
         <h2 className="mb-0" id={offer.id}>
           <button
-            className="group relative flex w-full items-center border-0 py-4 px-5 text-left text-base  transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none text-white "
-            // [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] <--- separating line
+            className="group relative flex w-full items-center border-0 py-4 px-5 text-left text-base  transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none text-white 
+             [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] "
             type="button"
-            onClick={ ()=> accordionChange(offer.id) }
             data-te-collapse-init
             data-te-target={`#collapse-${offer.id}`}
-            aria-expanded={ariaExpanded}
-            aria-controls={`#collapse-${offer.id}`}>
+            aria-expanded= "false"
+            >
             {offer.title}
             <span
               className="ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-gray-300 transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:rotate-0  motion-reduce:transition-none dark:fill-gray-300 ">
@@ -89,7 +87,7 @@ const blog = ({data}) => {
           {offer.desc}
           </div>
         </div>
-      </div>
+      </>
     )
     })}
     </div>

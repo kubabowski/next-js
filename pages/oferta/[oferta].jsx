@@ -14,7 +14,7 @@ const Blog = ({ offer }) => {
   
   
   return (
-    <div className='container mt-[3%]'>
+    <div className='container mt-[3%] mx-auto text-center'>
       <div className='text-2xl text-center text-white align-bottom'>{title}</div>
       <div className='text-white align-bottom'>{desc}</div>
       <button className='text-white p-5' onClick={goToContact}>{router.query.topic}</button>
