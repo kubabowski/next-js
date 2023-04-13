@@ -76,22 +76,22 @@ const Navbar = (props) => {
 
              
             <Link href='/'>
-                <div className='logo py-1 text-md'>
+                <div className='logo py-1 text-md uppercase tracking-wider'>
                     Kalina Opalińska
                     {props.title}
                 </div>
             </Link>
     
-            <ul className='hidden sm:flex'>
+            <ul className='hidden md:flex'>
               {NAV_LINKS.map(({name, url}) => (
-                <li className={`text-md ${currentRoute == url ? "active" : ""} mx-4 py-1`}>
+                <li className={`text-sm ${currentRoute == url ? "active" : ""} mx-4 py-1 uppercase`}>
                   <Link href={url}>
-                    {name}dd
+                    {name}
                   </Link>
                 </li>
               ))}               
             </ul>
-            <a href='#' className='text-white sm:hidden' onClick={handleNav} >
+            <a href='#' className='text-white md:hidden' onClick={handleNav} >
             <svg viewBox="0 0 50 80" width="40" height="20">
               <rect fill='white' width="100" height="5"></rect>
               <rect fill='white' y="30" width="100" height="5"></rect>
@@ -102,7 +102,7 @@ const Navbar = (props) => {
         
             <div className={nav 
                 ? 'absolute top-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' 
-                : ' sm:hidden absolute top-0 right-[-100%] bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'}>
+                : ' md:hidden absolute top-0 right-[-100%] bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'}>
                 <ul>
                   {NAV_LINKS.map(({name, url}) => (
                     <li className='p-4 text-lg hover:text-gray-500 ease-in-out duration-150 '>
@@ -113,7 +113,7 @@ const Navbar = (props) => {
                 ))}      
                          
                 </ul>
-                <a href='#' className='text-white sm:hidden text-xl absolute top-[4%] right-[7%]' onClick={handleNav} >
+                <a href='#' className='text-white md:hidden text-xl absolute top-[4%] right-[7%]' onClick={handleNav} >
                 <svg width="40" height="40" viewbox="0 0 40 40"><path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="white" stroke-width="1" /></svg>
                 </a>      
             </div>

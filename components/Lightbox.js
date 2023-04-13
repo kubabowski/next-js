@@ -39,7 +39,7 @@ const Lightboxv1 = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <div className="wrapper">
         {rowCols.length > 0 &&
           data.images.map((item, index) => (

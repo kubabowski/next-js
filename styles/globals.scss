@@ -37,8 +37,8 @@ html, body {
     height: 100%;
     // filter: contrast(90%) brightness(130%);
     background: 
-    linear-gradient(to bottom,rgba(0,0,0,.6) 0,rgba(0,0,0,.1) 100%),
-    linear-gradient(360deg, rgba(0,0,0,0.82), rgba(255,255,255,0)),
+    linear-gradient(to bottom,rgba(0,0,0,.65) 0,rgba(0,0,0,.1) 60%),
+    // linear-gradient(360deg, rgba(0,0,0,0.82), rgba(255,255,255,0)),
     // linear-gradient(360deg, rgba(16,16,16,1), rgba(0,0,255,0)),
     // linear-gradient(360deg, rgba(133,133,133,1), rgba(0,0,94,0)),
     // linear-gradient(148deg, rgba(107,106,106,1), rgba(255,255,255,0.63)),
@@ -48,6 +48,7 @@ html, body {
    
     url("../images/bckground1.png");
     background-repeat: no-repeat;
+    background-repeat-x: repeat;
     background-size: auto;
     background-attachment: fixed;
     
@@ -55,7 +56,7 @@ html, body {
   }
 
   .white-line {
-    width: 85%;
+    width: 40%;
     height: 1px;
     background-color: white;
     margin-bottom: 2rem;
