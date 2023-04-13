@@ -16,10 +16,7 @@ const NAV_LINKS = [
     name: "Oferta",
     url: '/oferta'
   },
-  {
-    name: "Cennik",
-    url: '/cennik'
-  },
+  
   {
     name: "Blog",
     url: '/blog'
@@ -88,7 +85,7 @@ const Navbar = (props) => {
                   <Link href={url}>
                     {name}
                   </Link>
-                </li>
+                </li> 
               ))}               
             </ul>
             <a href='#' className='text-white md:hidden' onClick={handleNav} >

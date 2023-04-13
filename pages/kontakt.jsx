@@ -49,7 +49,7 @@ function contact() {
 
   return (
     <>
-    <div className='container flex flex-col md:flex-row  mt-[2rem] contact'>
+    <div className='container flex flex-col md:flex-row mx-auto mt-[2rem] contact'>
     <div className='md:w-[50%] md:pr-[6rem]'>
       <div className='mb-6'>
         <span className='text-xl text-white'>Skontaktuj się ze mną</span>

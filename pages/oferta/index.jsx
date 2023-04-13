@@ -6,11 +6,7 @@ import Link from 'next/link'
 
 const blog = ({data}) => {
 
-  const[hoveredItem, setHoveredItem] = useState({
-    id: null,
-    title:"",
-    desc: ""
-  });
+
   const [ariaExpanded, setAriaExpanded] = useState(false);
   const [collapseShow, setCollapseShow] = useState("");
   // const ref = useRef();
@@ -20,31 +16,32 @@ const blog = ({data}) => {
   }
 
 
-  useEffect(()=> {
-    const {id, title, desc} = hoveredItem 
-  },[hoveredItem])
+ 
 
   return (
     <>
-    <div className=' justify-center mt-[2rem] container hidden md:flex'>
-      <div className=' w-[20%]'>
+    
+    <div className=' justify-center mt-[2rem] container mx-auto hidden md:flex'>
+      <div className=' w-[20%] text-center'>
         {Object.values(data).map((offer)=> {
 
           return(
             <div className='mb-1 '>
-                <Link onMouseEnter={()=> { setHoveredItem(offer); }} className='text-white text-md animated-underline pb-1 ' key={offer.id} href={`#`}>
+                <Link className='text-white text-md animated-underline pb-1 '  href={`/oferta/${offer.slug}`}>
                   {offer.title}
                 </Link>
+               
             </div>
           )
         })}
       </div>
-      <div className=' w-[80%] h-[100%] text-white'>
+      {/* <div className=' w-[80%] h-[100%] text-white'> */}
           {/* <NewLineText props={JSON.stringify(hoveredItem.desc)} /> */}
-          {hoveredItem.desc && <p className='text-center' dangerouslySetInnerHTML={{__html: hoveredItem.desc.replace('\r\n','<br />')}} />}
-      </div>
+          {/* {hoveredItem.desc && <p className='text-center' dangerouslySetInnerHTML={{__html: hoveredItem.desc.replace('\r\n','<br />')}} />} */}
+      {/* </div> */}
       
     </div>
+    
     <div className='md:hidden'>
     <div id='accordionOffer'>
     {Object.values(data).map((offer)=> {
