@@ -9,8 +9,7 @@ module.exports = {
   theme: {
     screens: { 
       'start': '100px',
-      '2xs': '350px',
-      'xs': '500px',
+      'xs': '400px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
@@ -57,13 +56,9 @@ module.exports = {
               '@screen start': {
                 maxWidth: '250px',
               },
-              // '2xs': '350px',
-              '@screen 2xs': {
-                maxWidth: '340px',
-              },
-              // 'xs': '500px',
+              // 'xs': '400px',
               '@screen xs': {
-                maxWidth: '450px',
+                maxWidth: '310px',
               },
               // 'sm' => '640px'
               '@screen sm': {
@@ -94,7 +89,7 @@ module.exports = {
                 maxWidth: '1780px',
               },
               // '5xl': '2000px',
-              '@screen 5xl': {
+              '@screen 4xl': {
                 maxWidth: '2000px',
               },
             }
