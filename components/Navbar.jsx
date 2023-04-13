@@ -86,7 +86,7 @@ const Navbar = (props) => {
               {NAV_LINKS.map(({name, url}) => (
                 <li className={`text-md ${currentRoute == url ? "active" : ""} mx-4 py-1`}>
                   <Link href={url}>
-                    {name}
+                    {name}dd
                   </Link>
                 </li>
               ))}               
