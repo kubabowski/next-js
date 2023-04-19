@@ -89,7 +89,7 @@ module.exports = {
                 maxWidth: '1780px',
               },
               // '5xl': '2000px',
-              '@screen 4xl': {
+              '@screen 5xl': {
                 maxWidth: '2000px',
               },
             }

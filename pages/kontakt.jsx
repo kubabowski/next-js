@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react'
+import insta from '../images/instagram.svg'
+import Image from 'next/image'
 
 function contact() {
 
@@ -61,6 +63,18 @@ function contact() {
       <div>
         <span className='text-md text-white mb-6'>instagram.com/kalinaopalinska</span>
       </div>
+      <div>
+        <a href="https://instagram.com/kalinaopalinska">
+              <Image 
+              
+              src={insta}
+              alt='insta'
+              className='about-me-img'
+              width='30'
+              
+              />
+          </a>
+      </div>
       
       <div>
         <span className='text-md text-white mb-6'>730 737 974</span>
@@ -68,7 +82,7 @@ function contact() {
     </div>
       <div className='mt-[3rem] md:mt-0 md:w-[35%]'>
         <div className='mb-6'>
-          <span className='text-xl text-white mb-6'>lub skorzystaj z formularza</span>
+          <span className='text-lg text-white mb-6'>lub skorzystaj z formularza</span>
         </div>
         <form className='flex flex-col' onSubmit={onSubmit}>
             <label className=' mr-6 text-white'>Imię i nazwisko</label>

@@ -3,6 +3,10 @@ import '../styles/globals.scss';
 import Navbar from '../components/Navbar';
 import Head from 'next/head'
 import { useRouter } from 'next/router';
+import dynamic from "next/dynamic";
+import Footer from '../components/Footer';
+
+
 
  
 
@@ -23,12 +27,8 @@ function MyApp({ Component, pageProps }) {
 
   
 
-  React.useEffect(() => {
-    const use = async () => {
-      (await import('tw-elements')).default;
-    };
-    use();
-  }, []);
+  
+  
 
   return (
     <>
@@ -43,6 +43,7 @@ function MyApp({ Component, pageProps }) {
         <div className={`${currentRoute} home-gradient min-h-screen pb-10`}>
           <div id='scrollMargin'  style={{ height: navHeight }} />
           <Component {...pageProps} />
+          <Footer />
         </div>
     </>
   )

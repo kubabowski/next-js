@@ -1,19 +1,13 @@
 import React, { use, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 // import * as te from 'tw-elements';
+// import { Datepicker, Input, initTE } from "tw-elements";
 
 
 
 const blog = ({data}) => {
 
-
-  const [ariaExpanded, setAriaExpanded] = useState(false);
-  const [collapseShow, setCollapseShow] = useState("");
-  // const ref = useRef();
   
-  const accordionChange = (id) => {
-    setAriaExpanded((prevAriaExpanded) => !prevAriaExpanded);
-  }
   
  
 
@@ -55,7 +49,7 @@ const blog = ({data}) => {
             type="button"
             data-te-collapse-init
             data-te-target={`#collapse-${offer.id}`}
-            aria-expanded= "false"
+            
             >
             {offer.title}
             <span
