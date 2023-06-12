@@ -1,22 +1,26 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
+    "devl": "next dev",
     "build": "next build",
-    "start": "next start",
-    "export": "next export"
+    "start": "NODE_ENV=production node server.js",
+    "lint": "next lint"
   },
   "dependencies": {
     "fancybox": "^3.0.1",
     "fs": "^0.0.1-security",
-    "next": "latest",
-    "react": "18.2.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.2.3",
+    "net": "^1.0.2",
+    "next": "^13.4.3",
+    "react": "^18.2.0",
     "react-18-image-lightbox": "^5.1.4",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
     "react-slick": "^0.29.0",
     "sass": "^1.57.1",
-    "tw-elements": "^1.0.0-beta1",
-    "xlsx": "^0.18.5",
+    "tls": "^0.0.1",
     "yet-another-react-lightbox": "^2.6.2"
   },
   "devDependencies": {

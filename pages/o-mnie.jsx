@@ -6,30 +6,30 @@ const about = () => {
 
   // const img = require('./../images/sesja9.jpg');
   return (
-    <div className='flex flex-col md:flex-row container lg:w-[74%] mx-auto'>
-      <div className=' w10 md:w-[35%] order-2 md:order-1'>
+    <div className='flex flex-col md:flex-row container lg:w-[75%] mx-auto m mb-20'>
+      <div className=' w10 md:w-[30%] order-2 md:order-1 mr-10'>
         <Image 
           // src={require('./../images/sesja9.jpg').default}
           src={aboutImg}
           alt='about-me'
           className='about-me-img'
-          width='360'
+          width='500'
           
         />
       </div>
-      <div className='md:w-[65%] flex items-center lh order-1 md:order-2'>
-        <div className='text-white text-md leading-relaxed fira-extra font-extralight'>
-        <p>TWORZENIE WIZERUNKU JEST SZTUKĄ. KAŻDA Z NAS JEST NIEPOWTARZALNA, JEST INSPIRACJĄ, JEST PIĘKNA. NIE TYLKO NA ZEWNĄTRZ.</p>
+      <div className='md:w-[55%] flex items-center lh order-1 md:order-2'>
+        <div className='text-white text-md leading-relaxed fira-extra font-extralight uppercase'>
+        <p className='mb-3'>Tworzenie wizerunku jest sztuką. Każda z nas jest niepowtarzalna, jest inspiracją, jest piękna. Nie tylko na zewnątrz. </p>
 
-        <p>PRZEZ LATA DZIAŁAŃ WYMAGAJĄCYCH MOJEJ KREATYWNOŚCI, DBAŁOŚCI O KAŻDY SZCZEGÓŁ, JAKOŚĆ I PREZENTACJE, NAUCZYŁAM SIĘ, ŻE KAŻDA Z NAS POTRZEBUJE CZASU, ABY ZROZUMIEĆ KIM JEST, JAK SIĘ CZUJE I JAKIE WYBORY SĄ DLA NIEJ NAJLEPSZE. CO SPRAWIA, ŻE CZUJE SIĘ PEWNA I W PEŁNI SOBĄ.</p>
+        <p className='mb-3'>Naturalne piękno każdej z Was inspiruje mnie do tworzenia wizerunku, który dopełnia urodę - nie zmieniając jej nie do poznania - i pozwala Ci pokochać samą siebie, poczuć się silną i świadomą swojego piękna wewnętrznego, które tylko podkreślamy na zewnątrz makijażem. </p>
 
-        <p>NATURALNE PIĘKNO KAŻDEJ Z WAS INSPIRUJE MNIE DO TWORZENIA WIZERUNKU, KTÓRY DOPEŁNIA URODĘ – NIE ZMIENIAJĄC JEJ NIE DO POZNANIA – I POZWALA CI POKOCHAĆ SAMĄ SIEBIE, POCZUĆ SIĘ SILNĄ I ŚWIADOMĄ SWOJEGO PIĘKNA WEWNĘTRZNEGO, KTÓRE TYLKO PODKREŚLAMY NA ZEWNĄTRZ MAKIJAŻEM.</p>
+        <p className='mb-3'>Z makijażem i stylizacją związana jestem od ponad 15 lat. Mam za sobą udział w tworzeniu nowych marek i wizji, pracę przy sesjach zdjęciowych, pokazach mody, produkcje reklamowe, edytoriale, współprace korporacyjne, ale przede wszystkim pracę z klientem indywidualnym, którą cenię sobie najbardziej. Mam za sobą współpracę z markami takimi jak Yves Saint Laurent, Bobbi Brown, Laura Mercier czy Giorgio Armani min. w Krakowie i Wrocławiu. </p>
 
-        <p> MÓJ ZAWÓD WYKONUJĘ OD PONAD 14 LAT. MAM ZA SOBĄ UDZIAŁ W TWORZENIU NOWYCH MAREK I WIZJI, PRACĘ PRZY SESJACH ZDJĘCIOWYCH, POKAZACH MODY, PRODUKCJE REKLAMOWE, EDYTORIALE, ALE PRZEDE WSZYSTKIM PRACĘ Z KLIENTEM INDYWIDUALNYM, KTÓRĄ CENIĘ SOBIE NAJBARDZIEJ. MAM ZA SOBĄ WSPÓŁPRACĘ Z MARKAMI TAKIMI JAK YVES SAINT LAURENT, BOBBI BROWN, LAURA MERCIER CZY GIORGIO ARMANI MIN. W KRAKOWIE I WROCŁAWIU.</p>
+        <p className='mb-3'>W mojej pracy kładę duży nacisk na codzienną rutynę pielęgnacyjną, kondycję skóry i szacunek do niej. Skóra jest jak płótno. Dobrze przygotowana daje piękną powierzchnię do pracy. Ogromne znaczenie ma dla mnie indywidualne podejście, Wasze inspiracje i aktualny nastrój, to, czy szukamy efektu wow, czy może lekkości w makijażu.</p>
 
-        <p>W CODZIENNEJ PRACY KŁADĘ DUŻY NACISK NA KONDYCJE SKÓRY I SZACUNEK DO NIEJ, CODZIENNĄ RUTYNĘ PIELĘGNACYJNĄ, HIGIENĘ PRODUKTÓW I AKCESORIÓW DO APLIKACJI. LUBIĘ ROZMAWIAĆ, UMIEM MILCZEĆ. BO PODCZAS MAKIJAŻU BYWA RÓŻNIE, CZASAMI ROZMOWY NIE MAJA KOŃCA A CZASAMI POTRZEBUJEMY CISZY, KTÓRA NAS DOPEŁNIA.</p>
-        <p>TU JEST CAŁE MOJE SERCE, LATA DOŚWIADCZEŃ, PRZESTRZEŃ TWÓRCZA I MIEJSCE NA ROZWÓJ.</p>
-        <p>TO JEST MÓJ ŚWIAT. ZAPRASZAM CIĘ DO NIEGO.</p>
+        <p className='mb-3'>Lubię rozmawiać, umiem milczeć. Bo podczas makijażu bywa różnie, czasami rozmowy nie maja końca a czasami potrzebujemy ciszy, która nas dopełnia.</p>
+
+        <p className='mb-3'>Tu jest całe moje serce, lata doświadczeń, przestrzeń twórcza i miejsce na rozwój. To jest mój świat. Zapraszam Cię do niego.</p>
         </div>
       </div>
 

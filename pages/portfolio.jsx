@@ -1,16 +1,21 @@
-import { title } from 'process'
-import React, { useEffect, useState, useRef} from 'react'
-import Slider from '../components/Slider'
-import data from "../data/images.json";
+import React from 'react'
 import Lightboxv1 from "../components/Lightbox"
+import { getPortfolio } from './api/db';
 
-
-
-  const portfolio = () => {
-
+const Portfolio = ({ portfolio }) => {
   return (
-    <Lightboxv1  />
+    <Lightboxv1 portfolio={portfolio} />
   )
 }
 
-export default portfolio;
+export async function getServerSideProps() {
+  const portfolio = await getPortfolio();
+
+  return {
+    props: {
+      portfolio,
+    },
+  };
+}
+
+export default Portfolio;

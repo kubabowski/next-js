@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Link from 'next/link'
 
-const blog = ({data}) => {
+const Blog = ({data}) => {
   
 
   return (
@@ -24,7 +24,7 @@ const blog = ({data}) => {
   )
 }
 
-export default blog
+export default Blog
 
 export async function getServerSideProps() {
   const { post } = await import('../../data/daneBlog.json')

@@ -17,7 +17,8 @@ const Blog = ({ post }) => {
   return (
     <div className='container mx-auto text-center mt-[3%]'>
       <div className='text-2xl text-center text-white align-bottom'>{title} {image}</div>
-      <div className='text-white align-bottom mx-auto sm:w-[90%]'>{text1}</div>
+      <div className='text-white font-extralight align-bottom mx-auto sm:w-[60%]'>{text1}</div>
+      {router.query.topic}
       {image}
       <img src={image} alt={title} className=""/>
       <button className='text-white p-5' onClick={goToContact}>{router.query.topic} </button>

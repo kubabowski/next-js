@@ -1,28 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import Lightbox from 'react-18-image-lightbox';
 import 'react-18-image-lightbox/style.css';
-import data from "../data/danePortfolio.json";
-import 'react-18-image-lightbox/style.css'; 
+import Image from 'next/image';
 
-const Lightboxv1 = () => {
+
+const Lightboxv1 = ({ portfolio }) => {
   const [rowCols, setRowCols] = useState([]);
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const imagesQuantity = data.images.length;
+    const imagesQuantity = portfolio.length;
     const rowCols = Array.from(
-      {length: imagesQuantity}, () => [randomNumber(4), randomNumber(3), randomNumber(10)]
+      { length: imagesQuantity },
+      () => [randomNumber(4), randomNumber(3), randomNumber(10)]
     );
     setRowCols(rowCols);
-  }, [data]);
+  }, [portfolio]);
 
   const randomNumber = (limit) => Math.floor(Math.random() * limit) + 1;
 
-  const images = data.images.map((item, index) => ({
-    src     : item.photo_url,
-    caption: item.desc,
-    index
+  const images = portfolio.map((item, index) => ({
+    src: `/${item.photo_url}`,
+    caption: item.photo_desc,
+    index,
   }));
 
   const openLightbox = (index) => {
@@ -42,17 +43,27 @@ const Lightboxv1 = () => {
     <div className="container mx-auto">
       <div className="wrapper">
         {rowCols.length > 0 &&
-          data.images.map((item, index) => (
+          portfolio.map((item, index) => (
             <div
               key={index}
               className={`wrapper-images height-${rowCols[index][0]} width-${rowCols[index][1]} padding-${rowCols[index][2]}`}
             >
               <img
-                src={item.photo_url}
-                alt={item.desc}
+                src={`/${item.photo_url}`}
+                alt={item.photo_desc}
                 onClick={() => openLightbox(index)}
                 className="portfolio-img"
               />
+
+            {/* <Image 
+              src={`/${item.photo_url}`}
+              alt={item.photo_desc}
+              className="portfolio-img"
+              width='500'
+              height='500'
+              onClick={() => openLightbox(index)}
+              
+            /> */}
             </div>
           ))}
       </div>
@@ -71,5 +82,7 @@ const Lightboxv1 = () => {
     </div>
   );
 };
+
+
 
 export default Lightboxv1;

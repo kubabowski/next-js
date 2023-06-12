@@ -1,60 +1,66 @@
-const Modal = ({
-    clickedImg,
-    setClickedImg,
-    clickedImgDesc,
-    handleRotationRight,
-    handleRotationLeft
-  }) => {
-    const handleClick = (e) => {
-      let keyCode = e.keyCode
-      if (e.target.classList.contains("dismiss") || keyCode === 27) {
-        setClickedImg(null);
-      }
-    };
+import React from 'react';
+import Modal from 'react-modal';
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    width: '80%',
+    maxHeight: '80%',
+    background: 'rgba(0, 0, 0, 0.92)',
+    color: 'white',
+    fontWeight: '200',
+    overflowY: 'show',
+    paddingBottom: '3rem',
+
+  },
+  overlay: {
+    backgroundColor: 'rgba( 0 ,0 ,0 , 0.6 )',
+    
+  },
   
-    return (
-      <>
-        <div className="overlay dismiss" onClick={handleClick}>
-          <img src={clickedImg} alt="bigger pic" />
-          <div className="text-desc ml-10 text-white text-xl">{clickedImgDesc}</div>
-          <span className="dismiss" onClick={handleClick}>
-            X
-          </span>
-          <div onClick={handleRotationLeft} className="overlay-arrows_left">
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
-          <div onClick={handleRotationRight} className="overlay-arrows_right">
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  };
+};
+
+const Modalcomponent = (props) => {
+
+  let subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
   
-  export default Modal;
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  return (
+    <div>
+      <button className= {`text-white animated-underline ${props.customClass}`} onClick={openModal}>{props.label}</button>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+        
+
+  
+      >
+  
+        <button className='sticky top-[1%] left-[100%]' onClick={closeModal}><svg width="40" height="40" viewBox="0 0 40 40"><path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="white" strokeWidth="1" /></svg></button>
+        {props.text && (
+          <div className='text-center' dangerouslySetInnerHTML={{ __html: props.text }} />
+        )}
+        
+      </Modal>
+    </div>
+  );
+}
+
+export default Modalcomponent

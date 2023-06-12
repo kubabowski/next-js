@@ -1,10 +1,18 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
+  trailingSlash: true,
   reactStrictMode: false,
+  basePath: '',
   images: {
-    domains: [
-      'images.unsplash.com'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'rurituals.pl',
+        port: '',
+        pathname: '/images/**',
+      },
     ],
-    unoptimized: true
   }
 }
+
+module.exports = nextConfig

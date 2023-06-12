@@ -80,10 +80,12 @@ const Navbar = (props) => {
             </Link>
     
             <ul className='hidden md:flex'>
-              {NAV_LINKS.map(({name, url}) => (
-                <li className={`text-sm ${currentRoute == url ? "active" : ""} mx-4 py-1 uppercase`}>
+              {NAV_LINKS.map(({name, url}, index) => (
+                <li key={index} className={`text-sm ${currentRoute == url ? "active" : ""} mx-4 py-1 uppercase`}>
                   <Link href={url}>
-                    {name}
+                    <span className='font-extralight'>
+                      {name}
+                    </span>
                   </Link>
                 </li> 
               ))}               
@@ -101,8 +103,8 @@ const Navbar = (props) => {
                 ? 'absolute top-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300' 
                 : ' md:hidden absolute top-0 right-[-100%] bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'}>
                 <ul>
-                  {NAV_LINKS.map(({name, url}) => (
-                    <li className='p-4 text-lg hover:text-gray-500 ease-in-out duration-150 '>
+                  {NAV_LINKS.map(({name, url}, index) => (
+                    <li key={index} className='p-4 text-lg hover:text-gray-500 ease-in-out duration-150 '>
                       <Link href={url} onClick={handleNav}>
                         {name}
                       </Link>
@@ -111,7 +113,7 @@ const Navbar = (props) => {
                          
                 </ul>
                 <a href='#' className='text-white md:hidden text-xl absolute top-[4%] right-[7%]' onClick={handleNav} >
-                <svg width="40" height="40" viewbox="0 0 40 40"><path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="white" stroke-width="1" /></svg>
+                <svg width="40" height="40" viewBox="0 0 40 40"><path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="white" strokeWidth="1" /></svg>
                 </a>      
             </div>
         </div>

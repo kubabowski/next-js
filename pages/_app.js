@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 
 
 
+
  
 
 
@@ -40,9 +41,12 @@ function MyApp({ Component, pageProps }) {
       {/* <script src="../node_modules/tw-elements/dist/js/index.min.js"></script> */}
         <Navbar getNavHeight={getNavHeight} />
 
-        <div className={`${currentRoute} home-gradient min-h-screen pb-10`}>
+        <div className={`${currentRoute} home-gradient`}>
+          <div id='bg-shadow' />
           <div id='scrollMargin'  style={{ height: navHeight }} />
-          <Component {...pageProps} />
+          <div className='min-h-[90vh] relative'>
+            <Component {...pageProps} />
+          </div>
           <Footer />
         </div>
     </>
