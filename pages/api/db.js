@@ -4,13 +4,6 @@ import mysql from "mysql2/promise";
 // SERWER
 
 
-const dbconnection = mysql.createPool({
-  host: "localhost",
-  database: "p593293_kalina",
-  user: "p593293_kalina",
-  password: "kalina1369",
-  socketPath: "",
-});
 
 
 // DEV
