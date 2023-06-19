@@ -1,20 +1,15 @@
 import mysql from "mysql2/promise";
 
 
-// SERWER
-
-
-
-
 // DEV
 
-// const dbconnection = mysql.createPool({
-//   host: "localhost",
-//   database: "kalina",
-//   user: "root",
-//   password: "",
-//   socketPath: "",
-// });
+const dbconnection = mysql.createPool({
+  host: "localhost",
+  database: "kalina",
+  user: "root",
+  password: "",
+  socketPath: "",
+});
 
 
 export async function getOffers() {
