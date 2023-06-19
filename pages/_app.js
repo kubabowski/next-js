@@ -24,12 +24,6 @@ function MyApp({ Component, pageProps }) {
     })
     
   }
-  const [navPadding, setNavPadding] = React.useState(0)
-
-  
-
-  
-  
 
   return (
     <>
@@ -38,17 +32,17 @@ function MyApp({ Component, pageProps }) {
           <link rel="icon" href="/favicon.ico" />
         
       </Head>
-      {/* <script src="../node_modules/tw-elements/dist/js/index.min.js"></script> */}
-        <Navbar getNavHeight={getNavHeight} />
+  
+      <Navbar getNavHeight={getNavHeight} />
 
-        <div className={`${currentRoute} home-gradient`}>
-          <div id='bg-shadow' />
-          <div id='scrollMargin'  style={{ height: navHeight }} />
-          <div className='min-h-[90vh] relative'>
-            <Component {...pageProps} />
-          </div>
-          <Footer />
+      <div className={`${currentRoute} home-gradient`}>
+        <div id='bg-shadow' />
+        <div id='scrollMargin'  style={{ height: navHeight }} />
+        <div className='min-h-[90vh] relative'>
+          <Component {...pageProps} />
         </div>
+        <Footer />
+      </div>
     </>
   )
 }

@@ -12,7 +12,7 @@ const IndexPage = ({ offers }) => {
       {sortedOffers.map((offer) => (
         <div className='container text-center mb-5' key={offer.id}>
           <Link href={`/oferta/${offer.slug}`}>
-            <span className='text-white text-lg  animated-underline'>{offer.title}</span>
+            <span className='text-white text-md lg:text-lg  animated-underline'>{offer.title}</span>
           </Link>
         </div>
       ))

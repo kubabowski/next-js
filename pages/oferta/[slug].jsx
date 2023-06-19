@@ -24,8 +24,8 @@ const OfferDetails = ({ offers }) => {
   };
 
   return (
-    <div className='container mx-auto text-center mt-[3%] relative mb-10'>
-      <div className='sm:w-[50%] mx-auto'>
+    <div className='container mx-auto text-center mt-[3%] relative mb-10 pt-20 md:pt-0'>
+      <div className='sm:w-[90%] lg:w-[50%] mx-auto'>
         <div className='text-2xl text-center text-white align-bottom mb-5'>{title} </div> 
         <div dangerouslySetInnerHTML={{ __html: offerdesc }} className='text-white text-md align-bottom mx-auto sm:w-[90%] mb-10 font-extralight' />
         <div dangerouslySetInnerHTML={{ __html: subtitle1 }} className='text-white text-md align-bottom mx-auto sm:w-[90%] mb-2 font-medium tracking-wider' />
@@ -48,7 +48,7 @@ const OfferDetails = ({ offers }) => {
       {details &&
         <Modal customClass={'font-medium text-lg tracking-wider'} className='text-white mb-5' text={details} label={`SZCZEGÓŁY`} />
       }
-      <button className='text-white absolute top-0 left-0 flex items-center' onClick={goBack}>
+      <button className='text-white absolute top-0 left-0 flex items-center container' onClick={goBack}>
         <div className='mr-5'>
           <svg style={{fill: 'white', width: '40px'}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="arrow-left"><path d="m5.414 24 6.293-6.293-1.414-1.414L1.586 25l8.707 8.707 1.414-1.414L5.414 26H49v-2z"></path></svg>
          </div>

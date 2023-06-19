@@ -4,17 +4,14 @@ import Image from 'next/image'
 
 const about = () => {
 
-  // const img = require('./../images/sesja9.jpg');
   return (
     <div className='flex flex-col md:flex-row container lg:w-[75%] mx-auto m mb-20'>
       <div className=' w10 md:w-[30%] order-2 md:order-1 mr-10'>
         <Image 
-          // src={require('./../images/sesja9.jpg').default}
           src={aboutImg}
           alt='about-me'
-          className='about-me-img'
+          className='about-me-img hidden md:block'
           width='500'
-          
         />
       </div>
       <div className='md:w-[55%] flex items-center lh order-1 md:order-2'>
@@ -22,6 +19,12 @@ const about = () => {
         <p className='mb-3'>Tworzenie wizerunku jest sztuką. Każda z nas jest niepowtarzalna, jest inspiracją, jest piękna. Nie tylko na zewnątrz. </p>
 
         <p className='mb-3'>Naturalne piękno każdej z Was inspiruje mnie do tworzenia wizerunku, który dopełnia urodę - nie zmieniając jej nie do poznania - i pozwala Ci pokochać samą siebie, poczuć się silną i świadomą swojego piękna wewnętrznego, które tylko podkreślamy na zewnątrz makijażem. </p>
+        <Image 
+          src={aboutImg}
+          alt='about-me'
+          className='about-me-img md:hidden my-8 mx-auto'
+          width='250'
+        />
 
         <p className='mb-3'>Z makijażem i stylizacją związana jestem od ponad 15 lat. Mam za sobą udział w tworzeniu nowych marek i wizji, pracę przy sesjach zdjęciowych, pokazach mody, produkcje reklamowe, edytoriale, współprace korporacyjne, ale przede wszystkim pracę z klientem indywidualnym, którą cenię sobie najbardziej. Mam za sobą współpracę z markami takimi jak Yves Saint Laurent, Bobbi Brown, Laura Mercier czy Giorgio Armani min. w Krakowie i Wrocławiu. </p>
 

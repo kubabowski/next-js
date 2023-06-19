@@ -8,8 +8,8 @@ module.exports = {
   ],
   theme: {
     screens: { 
-      'start': '100px',
-      'xs': '400px',
+      'start': '250px',
+      'xs': '360px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
@@ -20,6 +20,7 @@ module.exports = {
       '5xl': '2100px',
     },
     fontSize:{
+      'sm': ['0.8rem ', { fontWeight : '100' }],
       'base': ['1rem ', { fontWeight : '100' }],
       'md':   ['1.3rem', { fontWeight : '100' }],
       'lg':   ['2rem', { fontWeight : '100' }],
@@ -35,6 +36,8 @@ module.exports = {
     container: {
       center: true,
       padding: {
+        'start': '0.15rem',
+        xs: '0.5rem',
         sm: '1rem',
         md: '3rem',
         lg: '3rem',
@@ -57,15 +60,21 @@ module.exports = {
 
               // 'start': '100px',
               '@screen start': {
-                maxWidth: '250px',
+                // maxWidth: '320px',
+                paddingLeft: '1rem',
+                paddingRight: '1rem',
               },
               // 'xs': '400px',
               '@screen xs': {
-                maxWidth: '310px',
+                // maxWidth: '290px',
+                paddingLeft: '1rem',
+                paddingRight: '1rem',
               },
               // 'sm' => '640px'
               '@screen sm': {
                 maxWidth: '600px',
+                paddingLeft: '0',
+                paddingRight: '0',
               },
               // 'md': '768px',
               '@screen md': {
@@ -98,7 +107,6 @@ module.exports = {
             }
           })
         }
-      
       ]
 }
  
