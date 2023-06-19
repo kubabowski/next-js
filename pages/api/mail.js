@@ -2,6 +2,9 @@ import {  transporter } from "../../mail_config/nodemailer";
 import axios from 'axios';
 
 
+const email = process.env.EMAIL;
+const secretKey = process.env.SECRET_CAPTCHA_KEY;
+
 
 const handler = async (req, res) => {
     if (req.method === 'POST') {
@@ -11,7 +14,7 @@ const handler = async (req, res) => {
         // Verify the reCAPTCHA token on the server
         const response = await axios.post('https://www.google.com/recaptcha/api/siteverify', null, {
           params: {
-            secret: '6LcssqYmAAAAALquC1er9bYKD8sjXO1PkwgO3oPy',
+            secret: secretKey,
             response: data.recaptchaToken,
           },
         });
@@ -19,8 +22,8 @@ const handler = async (req, res) => {
         if (response.data.success) {
           // reCAPTCHA verification successful, proceed with sending the form data
           await transporter.sendMail({
-            from: 'kontakt@kalinaopalinska.pl',
-            to: 'kontakt@kalinaopalinska.pl',
+            from: email,
+            to: email,
             subject: `Kontakt ${data.name}`,
             html: `
               <h3>Imię i nazwisko - ${data.name}</h3>
@@ -31,7 +34,7 @@ const handler = async (req, res) => {
             `,
           });
           await transporter.sendMail({
-            from: 'kontakt@kalinaopalinska.pl',
+            from: email,
             to: data.email,
             subject: data.subject,
             html: `
@@ -39,7 +42,7 @@ const handler = async (req, res) => {
               <h4>Jest to potwierdzenie wypełnienia formularza kontaktowego na stronie kalinaopalinska.pl</h4><br><br>
               <h3>treść twojego pytania:</h3>
               <p>${data.text}</p><br<br>
-              <h3>Wkrótcę odezwę się do Ciebie :)</h3>
+              <h3>Wkrótce odezwę się do Ciebie :)</h3>
             `,
           });
   

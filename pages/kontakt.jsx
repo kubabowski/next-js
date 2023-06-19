@@ -9,6 +9,8 @@ function Contact() {
   const [isSent, setIsSent] = React.useState(false);
   const [recaptchaToken, setRecaptchaToken] = React.useState('');
 
+  const key = process.env.CAPTCHA_KEY;
+
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = {};
@@ -53,7 +55,7 @@ function Contact() {
   
       
       grecaptcha.ready(() => {
-        grecaptcha.execute('6LcssqYmAAAAAENyLa2pmLao2cfPCXJwM7Cv_fxQ', { action: 'submit' }).then((token) => {
+        grecaptcha.execute( key, { action: 'submit' }).then((token) => {
           setRecaptchaToken(token);
         });
       });

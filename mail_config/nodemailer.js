@@ -2,14 +2,15 @@ import nodemailer from "nodemailer";
 
 const email = process.env.EMAIL;
 const pass = process.env.EMAIL_PASS;
+const domain = process.env.DOMAIN;
 
 export const transporter = nodemailer.createTransport({
-    host: "mail.kalinaopalinska.pl",
+    host: domain,
     port: 465,
     secure: true,
     auth: {
-        user: "kontakt@kalinaopalinska.pl",
-        pass: "kalina1369!"
+        user: email,
+        pass: pass
     }
 })
 
