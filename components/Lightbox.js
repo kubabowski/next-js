@@ -51,6 +51,16 @@ const images = portfolioDummyData.map((item, index) => ({
     caption: item.photo_desc,
     index,
   }));
+
+
+   useEffect(() => {
+    const imagesQuantity = portfolioDummyData.length;
+    const rowCols = Array.from(
+      { length: imagesQuantity },
+      () => [randomNumber(4), randomNumber(3), randomNumber(10)]
+    );
+    setRowCols(rowCols);
+  }, []);
   
   const openLightbox = (index) => {
     setPhotoIndex(index);
