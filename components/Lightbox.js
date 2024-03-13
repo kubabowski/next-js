@@ -22,11 +22,11 @@ const Lightboxv1 = ({ portfolio }) => {
 
   const randomNumber = (limit) => Math.floor(Math.random() * limit) + 1;
 
-  const images = portfolio.map((item, index) => ({
-    src: `/${item.photo_url}`,
-    caption: item.photo_desc,
-    index,
-  }));
+  // const images = portfolio.map((item, index) => ({
+  //   src: `/${item.photo_url}`,
+  //   caption: item.photo_desc,
+  //   index,
+  // }));
 
   const generateDummyData = () => {
   const dummyData = [];
@@ -46,7 +46,11 @@ const Lightboxv1 = ({ portfolio }) => {
 // Usage in your component
 const portfolioDummyData = generateDummyData();
 
-
+const images = portfolioDummyData.map((item, index) => ({
+    src: `/${item.photo_url}`,
+    caption: item.photo_desc,
+    index,
+  }));
   
   const openLightbox = (index) => {
     setPhotoIndex(index);
