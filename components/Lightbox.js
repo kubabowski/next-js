@@ -9,14 +9,16 @@ const Lightboxv1 = ({ portfolio }) => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    const imagesQuantity = portfolio.length;
-    const rowCols = Array.from(
-      { length: imagesQuantity },
-      () => [randomNumber(4), randomNumber(3), randomNumber(10)]
-    );
-    setRowCols(rowCols);
-  }, [portfolio]);
+  
+
+  // useEffect(() => {
+  //   const imagesQuantity = portfolio.length;
+  //   const rowCols = Array.from(
+  //     { length: imagesQuantity },
+  //     () => [randomNumber(4), randomNumber(3), randomNumber(10)]
+  //   );
+  //   setRowCols(rowCols);
+  // }, [portfolio]);
 
   const randomNumber = (limit) => Math.floor(Math.random() * limit) + 1;
 
@@ -26,6 +28,26 @@ const Lightboxv1 = ({ portfolio }) => {
     index,
   }));
 
+  const generateDummyData = () => {
+  const dummyData = [];
+
+  for (let i = 1; i <= 20; i++) {
+    const item = {
+      photo_url: `images/${i}.png`,
+      photo_desc: `Description for Image ${i}`,
+    };
+
+    dummyData.push(item);
+  }
+
+  return dummyData;
+};
+
+// Usage in your component
+const portfolioDummyData = generateDummyData();
+
+
+  
   const openLightbox = (index) => {
     setPhotoIndex(index);
     setIsOpen(true);
@@ -43,7 +65,7 @@ const Lightboxv1 = ({ portfolio }) => {
     <div className="container mx-auto">
       <div className="wrapper">
         {rowCols.length > 0 &&
-          portfolio.map((item, index) => (
+          portfolioDummyData.map((item, index) => (
             <div
               key={index}
               className={`wrapper-images height-${rowCols[index][0]} width-${rowCols[index][1]} padding-${rowCols[index][2]}`}
