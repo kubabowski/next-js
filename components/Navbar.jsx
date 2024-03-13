@@ -8,19 +8,19 @@ const NAV_LINKS = [
     name: "O mnie",
     url: '/o-mnie'
   },
-  // {
-  //   name: "Portfolio",
-  //   url: '/portfolio'
-  // },
+  {
+    name: "Portfolio",
+    url: '/portfolio'
+  },
   {
     name: "Oferta",
     url: '/oferta'
   },
   
-  // {
-  //   name: "Blog",
-  //   url: '/blog'
-  // },
+  {
+    name: "Blog",
+    url: '/blog'
+  },
   {
     name: "Kontakt",
     url: '/kontakt',
