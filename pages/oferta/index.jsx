@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { getOffers } from '../api/db';
 
 
-const IndexPage = ({ dummyOffers }) => {
+const IndexPage = () => {
 
   const dummyOffers = Array.from({ length: 20 }, (_, index) => ({
   id: index + 1,
