@@ -43,7 +43,7 @@ const Lightboxv1 = ({ portfolio }) => {
   return dummyData;
 };
 
-// Usage in your component
+
 const portfolioDummyData = generateDummyData();
 
 const images = portfolioDummyData.map((item, index) => ({
