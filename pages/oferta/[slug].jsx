@@ -3,12 +3,12 @@ import { useRouter } from 'next/router';
 import { getOffers } from '../api/db';
 import Modal from '../../components/Modal';
 
-const OfferDetails = ({ offers }) => {
+const OfferDetails = ({ dummyOffers }) => {
   const router = useRouter();
   const { slug } = router.query;
 
   // Find the offer with the matching slug
-  const offer = offers.find((offer) => {
+  const offer = dummyOffers.find((offer) => {
     console.log('Comparing:', offer.slug, slug);
     return offer.slug === slug;
   });
